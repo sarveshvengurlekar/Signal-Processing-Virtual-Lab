@@ -1,0 +1,10 @@
+streamlit
+base64
+numpy
+matplotlib.pyplot
+scipy.fft
+sounddevice
+soundfile
+wave
+scipy.signal
+scipy.io.wavfile
