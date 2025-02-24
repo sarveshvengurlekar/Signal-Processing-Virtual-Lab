@@ -1,0 +1,206 @@
+import numpy as np
+import matplotlib.pyplot as plt
+import streamlit as st
+import base64
+
+st.set_page_config(
+    page_title="Signals & Systems Virtual Lab",
+    layout="wide",
+    page_icon=" "
+)
+
+# Function to encode image in Base64
+def get_base64_image(image_path):
+    with open(image_path, "rb") as img_file:
+        return base64.b64encode(img_file.read()).decode()
+
+# Path to logo
+logo_path = r"C:\Users\sarve\Downloads\Coding\Python\DSP Internship\Streamlit\Signals & System Virtual Lab\static\fcritlogo.png"
+logo_base64 = get_base64_image(logo_path)
+
+# Header with embedded Base64 logo
+st.markdown(
+    f"""
+    <style>
+    .header {{
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 148px;
+        background-color: #0069FF;
+        color: #FFFFFF;
+        text-align: left;
+        padding: 20px 30px;
+        z-index: 1000;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }}
+
+    .header h1 {{
+        margin-top: 48px;
+        font-size: 30px;
+        line-height: 2.5;
+    }}
+
+    .logo-container {{
+        position: absolute;
+        top: 62px;
+        right: 20px;
+    }}
+
+    .stApp {{
+        margin-top: 146px; /* Ensure content starts below the fixed header */
+        padding-bottom: 80px; /* Prevent overlap with the footer */
+    }}
+
+    .footer {{
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 42px;
+        background-color: #0069FF;
+        color: #FFFFFF;
+        text-align: center;
+        padding: 10px;
+        font-size: 14px;
+        z-index: 1000;
+    }}
+    </style>
+    
+    <div class="header">
+        <h1>Fr. Conceicao Rodrigues Institute of Technology</h1>
+        <div class="logo-container">
+            <img src="data:image/png;base64,{logo_base64}" width="75">
+        </div>
+    </div>
+    """, 
+    unsafe_allow_html=True
+)
+
+# Footer
+st.markdown(
+    """
+    <div class="footer">
+        <p>© 2025 Fr. Conceicao Rodrigues Institute of Technology. All rights reserved.</p>
+    </div>
+    """, 
+    unsafe_allow_html=True
+)
+
+hide_menu= """
+<style>
+#MainMenu {
+visibility:hidden;
+}
+</style>
+"""
+
+st.markdown("""
+<style>
+	[data-testid="stDecoration"] {
+		display: none;
+	}
+
+</style>""",
+unsafe_allow_html=True)
+
+st.markdown(hide_menu, unsafe_allow_html=True)
+
+st.header("Cross-Correlation", divider=True)
+
+# Introduction
+st.markdown("""
+Cross-correlation is a fundamental technique in **signal processing** used to measure the similarity between two signals as a function of time lag.  
+It is widely applied in **pattern recognition, noise reduction, and system identification**.
+""")
+
+# Key Features Section
+st.header("Key Features")
+
+# Cross-Correlation Definition
+st.subheader("- Cross-Correlation Function")
+st.markdown("The cross-correlation between two signals \\( x(t) \\) and \\( y(t) \\) is defined as:")
+st.latex(r"R_{xy}(\tau) = \int_{-\infty}^{\infty} x(t) y(t - \tau) dt")
+
+st.markdown("""
+- It is useful in **signal alignment, detection, and feature extraction**.
+""")
+
+# Graphical Analysis
+st.subheader("- Graphical Analysis of Cross-Correlation")
+st.markdown("""
+- Compute and visualize **cross-correlation** for **sinusoidal (sine, cosine) and square waveforms**.  
+- Analyze how signals correlate when mixed with **noisy versions** of themselves.  
+- Identify **signal patterns, delay estimation, and filtering performance**.  
+""")
+
+# Applications
+st.subheader("- Applications")
+st.markdown("""
+- **Noise Filtering**: Identifying and removing noise from signals.  
+- **Synchronization**: Estimating time delay between received and transmitted signals.  
+- **Feature Detection**: Recognizing repeating patterns in data.  
+""")
+
+# Conclusion
+st.markdown("""
+This tool is essential for **engineers, researchers, and students** in **communications, radar systems, audio processing, and biomedical signal analysis**.
+""")
+
+st.header("", divider="blue")
+
+# Function to generate signals
+def generate_signal(signal_type, t):
+    frequency = 5  # Frequency of the wave
+    if signal_type == 'Sin':
+        return np.sin(2 * np.pi * frequency * t)
+    elif signal_type == 'Cos':
+        return np.cos(2 * np.pi * frequency * t)
+    elif signal_type == 'Square':
+        return np.sign(np.sin(2 * np.pi * frequency * t))
+    else:
+        return np.zeros_like(t)
+
+# Function to compute cross-correlation
+def cross_correlation(x, y):
+    n = len(x)
+    mean_x = np.mean(x)
+    mean_y = np.mean(y)
+    x_centered = x - mean_x
+    y_centered = y - mean_y
+    correlation = np.correlate(x_centered, y_centered, mode='full')
+    return correlation / (n * np.std(x) * np.std(y))
+
+# Streamlit UI
+
+signal_choice = st.selectbox("Function :", ["Sin", "Cos", "Square"])
+
+if st.button("Plot"):
+    t = np.linspace(0, 1, 1000)  # 1 second duration with 1000 samples
+    signal1 = generate_signal(signal_choice, t)
+    noise = np.random.normal(0, 0.5, signal1.shape)
+    signal2 = signal1 + noise
+    corr_result = cross_correlation(signal1, signal2)
+    lags = np.arange(-len(signal1) + 1, len(signal1))
+    
+    fig, axs = plt.subplots(3, 1, figsize=(13, 15))
+    
+    axs[0].plot(t, signal1, color='darkblue')
+    axs[0].set_title(f'Original {signal_choice.capitalize()} Signal')
+    axs[0].grid()
+    
+    axs[1].plot(t, signal2, color='red')
+    axs[1].set_title('Noisy Signal')
+    axs[1].grid()
+    
+    axs[2].plot(lags, corr_result, color='darkgreen')
+    axs[2].set_title('Cross-Correlation Result')
+    axs[2].set_xlabel('Lags')
+    axs[2].set_ylabel('Cross-Correlation')
+    axs[2].grid()
+    
+    st.pyplot(fig)
