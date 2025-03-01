@@ -1,0 +1,7 @@
+streamlit
+base64
+numpy
+sounddevice
+soundfile
+os
+wave
