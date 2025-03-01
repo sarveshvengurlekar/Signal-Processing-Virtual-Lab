@@ -13,7 +13,7 @@ def get_base64_image(image_path):
         return base64.b64encode(img_file.read()).decode()
 
 # Path to logo
-logo_path = r"C:\Users\sarve\Downloads\Coding\Python\DSP Internship\Streamlit\Signals & System Virtual Lab\static\fcritlogo.png"
+logo_path = r"static/fcritlogo.png"
 logo_base64 = get_base64_image(logo_path)
 
 # Header with embedded Base64 logo
@@ -224,4 +224,4 @@ Thus, the system is **verified to be Linear System.**.
 
 st.header("",divider="blue")
 
-st.image(r"C:\Users\sarve\Downloads\Coding\Python\DSP Internship\Streamlit\Signals & System Virtual Lab\Media\Linearity.jpg")
+st.image(r"Media/Linearity.jpg")
