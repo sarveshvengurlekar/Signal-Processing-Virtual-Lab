@@ -13,7 +13,7 @@ def get_base64_image(image_path):
         return base64.b64encode(img_file.read()).decode()
 
 # Path to logo
-logo_path = r"C:\Users\sarve\Downloads\Coding\Python\DSP Internship\Streamlit\Signals & System Virtual Lab\static\fcritlogo.png"
+logo_path = r"static/fcritlogo.png"
 logo_base64 = get_base64_image(logo_path)
 
 # Header with embedded Base64 logo
@@ -145,4 +145,4 @@ Since the system violates both **linearity** (due to changes in amplitude) and *
 st.header("",divider="blue")
 
 # Ensure the image is responsive and does not exceed the viewable area
-st.image(r"C:\Users\sarve\Downloads\Coding\Python\DSP Internship\Streamlit\Signals & System Virtual Lab\Media\Non_LTI.jpg", use_container_width=True)
+st.image(r"Media?Non_LTI.jpg", use_container_width=True)
