@@ -2,4 +2,6 @@
 streamlit==1.42.0
 numpy
 sounddevice
-
+soundfile
+os
+wave
