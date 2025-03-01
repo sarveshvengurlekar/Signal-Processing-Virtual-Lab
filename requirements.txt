@@ -1,6 +1,5 @@
 
 streamlit==1.42.0
-base64
 numpy
 sounddevice
 
