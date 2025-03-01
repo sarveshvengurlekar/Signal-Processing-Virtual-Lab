@@ -1,5 +1,5 @@
 
-pip==25.0.1
+pip
 streamlit==1.42.0
 base64
 numpy
