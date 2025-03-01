@@ -20,8 +20,8 @@ def get_base64_image(image_path):
         return None
 
 # Paths to logo and banner images
-logo_path = r"static\fcritlogo.png"
-banner_path = r"Media\Website_Banner.jpeg"
+logo_path = r"static/fcritlogo.png"
+banner_path = r"Media/Website_Banner.jpeg"
 
 # Encode images in Base64
 logo_base64 = get_base64_image(logo_path)
