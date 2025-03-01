@@ -14,7 +14,7 @@ def get_base64_image(image_path):
         return base64.b64encode(img_file.read()).decode()
 
 # Path to logo
-logo_path = r"C:\Users\sarve\Downloads\Coding\Python\DSP Internship\Streamlit\Signals & System Virtual Lab\static\fcritlogo.png"
+logo_path = r"static/fcritlogo.png"
 logo_base64 = get_base64_image(logo_path)
 
 # Header with embedded Base64 logo
@@ -116,9 +116,9 @@ st.header("Resources", divider=True)
 col1, col2, col3 = st.columns(3)
 
 # File path
-LTI_file_path = r"C:\Users\sarve\Downloads\Coding\Python\DSP Internship\Streamlit\Signals & System Virtual Lab\Resources\LTI_Sample_Audio.wav"
-Sampling_file_path =r"C:\Users\sarve\Downloads\Coding\Python\DSP Internship\Streamlit\Signals & System Virtual Lab\Resources\Sampling_Thm_Audio.wav"
-ECG_file_path = r"C:\Users\sarve\Downloads\Coding\Python\DSP Internship\Streamlit\Signals & System Virtual Lab\Resources\ECG_sample_sig.mat"
+LTI_file_path = r"Resources/LTI_Sample_Audio.wav"
+Sampling_file_path =r"Resources/Sampling_Thm_Audio.wav"
+ECG_file_path = r"Resources/ECG_sample_sig.mat"
 
 # Read the file in binary mode
 with open(LTI_file_path, "rb") as file:
