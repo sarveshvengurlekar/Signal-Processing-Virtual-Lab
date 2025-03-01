@@ -115,50 +115,50 @@ st.header("Resources", divider=True)
 
 col1, col2, col3 = st.columns(3)
 
-# File path
-LTI_file_path = r"Resources/LTI_Sample_Audio.wav"
-Sampling_file_path =r"Resources/Sampling_Thm_Audio.wav"
-ECG_file_path = r"Resources/ECG_sample_sig.mat"
+# File paths
+LTI_file_path = "Resources/LTI_Sample_Audio.wav"
+Sampling_file_path = "Resources/Sampling_Thm_Audio.wav"
+ECG_file_path = "Resources/ECG_sample_sig.mat"
 
-# Read the file in binary mode
+# Read each file separately
 with open(LTI_file_path, "rb") as file:
-    file_data = file.read()
+    LTI_file_data = file.read()
 
 with open(Sampling_file_path, "rb") as file:
-    file_data = file.read()
+    Sampling_file_data = file.read()
 
 with open(ECG_file_path, "rb") as file:
-    file_data = file.read()
+    ECG_file_data = file.read()
 
+# Column 1 - LTI Sample Audio
 with col1:
     st.write("## - LTI Sample Audio")
-    # Display download button
     st.download_button(
-        key=1,
+        key="LTI",
         label="Download Audio",
-        data=file_data,
+        data=LTI_file_data,
         file_name="LTI_Sample_Audio.wav",
         mime="audio/wav"
     )
 
+# Column 2 - Nyquist Sampling Theorem
 with col2:
     st.write("## - Nyquist Sampling Theorem")
-    # Display download button
     st.download_button(
-        key=2,
+        key="Sampling",
         label="Download Audio",
-        data=file_data,
+        data=Sampling_file_data,
         file_name="Sampling_Sample_Audio.wav",
         mime="audio/wav"
     )
 
+# Column 3 - QRS Filteration
 with col3:
     st.write("## - QRS Filteration")
-    # Display download button
     st.download_button(
-        key=3,
+        key="ECG",
         label="Download Data",
-        data=file_data,
+        data=ECG_file_data,
         file_name="ECG_sample_sig.mat",
         mime="application/octet-stream"
     )
