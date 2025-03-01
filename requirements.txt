@@ -1,6 +1,6 @@
 
 pip==25.0.1
-streamlit
+streamlit==1.42.0
 base64
 numpy
 sounddevice
