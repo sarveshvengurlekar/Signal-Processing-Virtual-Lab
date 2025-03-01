@@ -13,7 +13,7 @@ def get_base64_image(image_path):
         return base64.b64encode(img_file.read()).decode()
 
 # Path to logo
-logo_path = r"C:\Users\sarve\Downloads\Coding\Python\DSP Internship\Streamlit\Signals & System Virtual Lab\static\fcritlogo.png"
+logo_path = r"static/fcritlogo.png"
 logo_base64 = get_base64_image(logo_path)
 
 # Header with embedded Base64 logo
@@ -177,10 +177,10 @@ st.header("", divider="blue")
 
 # Video options
 video_options = {
-    "4 Point DFT (DIT Type)": r"C:\Users\sarve\Downloads\Coding\Python\DSP Internship\Streamlit\Signals & System Virtual Lab\Media\4_pt_DFT_(DIT).mp4",
-    "4 Point DFT (DIF Type)": r"C:\Users\sarve\Downloads\Coding\Python\DSP Internship\Streamlit\Signals & System Virtual Lab\Media\4_pt_DFT_(DIF).mp4",
-    "8 Point DFT (DIT Type)": r"C:\Users\sarve\Downloads\Coding\Python\DSP Internship\Streamlit\Signals & System Virtual Lab\Media\8_pt_DFT_(DIT).mp4",
-    "8 Point DFT (DIF Type)": r"C:\Users\sarve\Downloads\Coding\Python\DSP Internship\Streamlit\Signals & System Virtual Lab\Media\8_pt_DFT_(DIF).mp4",
+    "4 Point DFT (DIT Type)": r"Media/4_pt_DFT_(DIT).mp4",
+    "4 Point DFT (DIF Type)": r"Media/4_pt_DFT_(DIF).mp4",
+    "8 Point DFT (DIT Type)": r"Media/8_pt_DFT_(DIT).mp4",
+    "8 Point DFT (DIF Type)": r"Media/8_pt_DFT_(DIF).mp4",
 }
 
 # Dropdown to select video
