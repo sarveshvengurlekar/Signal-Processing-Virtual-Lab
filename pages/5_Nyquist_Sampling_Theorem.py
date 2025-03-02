@@ -160,23 +160,18 @@ def is_wav_file(file_path):
         return False
 
 def modify_sampling_rate(data, original_rate, new_rate):
-    """Resample the audio signal."""
-    duration = len(data) / original_rate
-    new_length = int(duration * new_rate)
-    modified_data = np.interp(
-        np.linspace(0, len(data) - 1, new_length),
-        np.arange(len(data)),
-        data
-    ).astype(data.dtype)
-    return modified_data
+    """Resample the audio signal using scipy for better quality."""
+    num_samples = int(len(data) * (new_rate / original_rate))
+    modified_data = resample(data, num_samples)
+    return modified_data.astype(np.int16)  # Ensure correct format
 
 def save_wav(filename, data, samplerate):
     """Save the modified WAV file."""
     with wave.open(filename, 'wb') as wav_file:
-        wav_file.setnchannels(1)  # Mono
-        wav_file.setsampwidth(2)
+        wav_file.setnchannels(1)  # Mono audio
+        wav_file.setsampwidth(2)  # 16-bit audio
         wav_file.setframerate(samplerate)
-        wav_file.writeframes((data * 32767).astype(np.int16).tobytes())
+        wav_file.writeframes(data.tobytes())
 
 uploaded_file = st.file_uploader("Upload an Audio File (.wav)", type=["wav"])
 if uploaded_file:
@@ -194,7 +189,7 @@ if uploaded_file:
         st.write(f"Original Sampling Rate: {samplerate} Hz")
 
         new_rate = st.number_input("Enter New Sampling Rate (Hz):", min_value=100, max_value=50000, value=samplerate, step=100)
-        
+
         if st.button("Play Original"):
             st.audio(file_path, format="audio/wav")
 
@@ -202,7 +197,7 @@ if uploaded_file:
             modified_data = modify_sampling_rate(audio_data, samplerate, new_rate)
             output_filename = "processed_audio.wav"
             save_wav(output_filename, modified_data, new_rate)
-            
+
             st.audio(output_filename, format="audio/wav")
 
     else:
