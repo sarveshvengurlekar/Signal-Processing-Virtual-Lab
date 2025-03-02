@@ -130,30 +130,9 @@ with open(Sampling_file_path, "rb") as file:
 with open(ECG_file_path, "rb") as file:
     ECG_file_data = file.read()
 
-# Column 1 - LTI Sample Audio
-with col1:
-    st.write("## - LTI Sample Audio")
-    st.download_button(
-        key="LTI",
-        label="Download Audio",
-        data=LTI_file_data,
-        file_name="LTI_Sample_Audio.wav",
-        mime="audio/wav"
-    )
-
-# Column 2 - Nyquist Sampling Theorem
-with col2:
-    st.write("## - Nyquist Sampling Theorem")
-    st.download_button(
-        key="Sampling",
-        label="Download Audio",
-        data=Sampling_file_data,
-        file_name="Sampling_Sample_Audio.wav",
-        mime="audio/wav"
-    )
 
 # Column 3 - QRS Filteration
-with col3:
+with col2:
     st.write("## - QRS Filteration")
     st.download_button(
         key="ECG",
