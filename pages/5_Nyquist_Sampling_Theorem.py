@@ -152,4 +152,13 @@ This tool is valuable for **engineers, researchers, and students** in **signal p
 
 st.header("",divider="blue")
 
+video_options = {
+    "4 Point DFT (DIT Type)": r"Nyquist.mp4"
+}
+
+# Dropdown to select video
+selected_video = st.selectbox("Select Video", list(video_options.keys()), index=0)
+
+# Display selected video
+st.video(video_options[selected_video])
 
