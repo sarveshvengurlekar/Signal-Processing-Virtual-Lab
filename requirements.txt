@@ -4,5 +4,4 @@ matplotlib
 numpy
 scipy
 wave
-pydub
-ffmpeg
+
