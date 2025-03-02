@@ -3,5 +3,6 @@ streamlit==1.42.0
 matplotlib
 numpy
 scipy
-sounddevice
 wave
+sounddevice
+soundfile
