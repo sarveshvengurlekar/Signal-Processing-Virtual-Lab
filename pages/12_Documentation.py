@@ -161,33 +161,6 @@ st.write("""
 4. The waveform contains four subplots (same as Autocorrelation), except ESD is not included in Cross-Correlation.
 """)
 
-st.write("## - Nyquist Sampling Theorem")
-st.write("""
-1. Click on the Nyquist Sampling Theorem section.
-2. Click on the “Browse files” button.
-3. Click the button to upload an **audio .wav file**.
-4. If we don't have audio file then go to Resource page & download the audio for the Nyquist Sampling Theorem.
-4. The original sampling rate and maximum frequency will be displayed.
-5. Adjust the sampling rate using the input box or “+/-” buttons, if the audio file is from the resources put sampling rate of 80Hz.
-6. Four playback options are available:
-   - **Play Original:** Plays the unmodified audio.
-   - **Pause:** Stops playback.
-   - **Play Modified:** Plays the resampled audio.
-   - **Process Audio:** Displays four waveforms:
-     - **1st waveform:** Original audio signal.
-     - **2nd waveform:** Original audio spectrum.
-     - **3rd waveform:** Modified audio signal.
-     - **4th waveform:** Modified audio spectrum.
-""")
-
-st.write("## - LTI System")
-st.write("""
-1. Click on the LTI System section.
-3. Click the “Browse files” button to upload a **.wav file**, if you don't have .wav audio file then go to Resources section & download the file for LTI System.
-4. Upon successful upload, a message **“.wav file loaded successfully!”** will be displayed.
-5. Select the type of filter from dropdown.
-6. Enter cutoff frequency if you upload the given audio file from the resources then put 1000Hz to see the difference.
-""")
 
 st.write("## - Discrete Fourier Transform (DFT)")
 st.write("""
