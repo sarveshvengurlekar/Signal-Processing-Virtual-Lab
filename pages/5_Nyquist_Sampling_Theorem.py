@@ -1,4 +1,6 @@
 import numpy as np
+import sounddevice as sd
+import soundfile as sf
 import matplotlib.pyplot as plt
 import streamlit as st
 import os
