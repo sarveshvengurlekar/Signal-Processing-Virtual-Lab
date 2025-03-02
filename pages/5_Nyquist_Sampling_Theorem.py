@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 import streamlit as st
 import wave
 import base64
+from scipy.signal import resample
 
 st.set_page_config(
     page_title="Signals & Systems Virtual Lab",
