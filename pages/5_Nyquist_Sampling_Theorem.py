@@ -1,11 +1,10 @@
 import numpy as np
-import sounddevice as sd
-import soundfile as sf
 import matplotlib.pyplot as plt
 import streamlit as st
-import os
 import wave
 import base64
+from pydub import AudioSegment
+from pydub.playback import play
 
 st.set_page_config(
     page_title="Signals & Systems Virtual Lab",
@@ -161,61 +160,27 @@ def is_wav_file(file_path):
     except (wave.Error, FileNotFoundError):
         return False
 
-def play_audio(data, samplerate):
-    sd.play(data, samplerate)
-
-def pause_audio():
-    sd.stop()
+def play_audio(file_path):
+    audio = AudioSegment.from_wav(file_path)
+    play(audio)
 
 def modify_sampling_rate(data, original_rate, new_rate):
     duration = len(data) / original_rate
     new_length = int(duration * new_rate)
-    if len(data.shape) == 1:
-        modified_data = np.interp(
-            np.linspace(0, len(data) - 1, new_length),
-            np.arange(len(data)),
-            data
-        ).astype(data.dtype)
-    else:
-        modified_data = np.zeros((new_length, data.shape[1]), dtype=data.dtype)
-        for channel in range(data.shape[1]):
-            modified_data[:, channel] = np.interp(
-                np.linspace(0, len(data) - 1, new_length),
-                np.arange(len(data)),
-                data[:, channel]
-            ).astype(data.dtype)
+    modified_data = np.interp(
+        np.linspace(0, len(data) - 1, new_length),
+        np.arange(len(data)),
+        data
+    ).astype(data.dtype)
     return modified_data
 
 def plot_audio_signals(original_data, modified_data, original_rate, new_rate):
     fig, axs = plt.subplots(2, 2, figsize=(12, 8))
-    
-    # Time-domain representation
     axs[0, 0].plot(original_data[:2000], color="red")
     axs[0, 0].set_title("Original Audio Signal")
     axs[1, 0].plot(modified_data[:2000], color="blue")
     axs[1, 0].set_title("Modified Audio Signal")
-    
-    # Frequency-domain representation
-    freq_orig = np.fft.fftfreq(len(original_data), d=1/original_rate)
-    fft_orig = np.fft.fft(original_data)
-    axs[0, 1].plot(freq_orig[:len(freq_orig)//2], np.abs(fft_orig)[:len(fft_orig)//2], color="darkred")
-    axs[0, 1].set_title("Original Audio Spectrum")
-    
-    freq_mod = np.fft.fftfreq(len(modified_data), d=1/new_rate)
-    fft_mod = np.fft.fft(modified_data)
-    axs[1, 1].plot(freq_mod[:len(freq_mod)//2], np.abs(fft_mod)[:len(fft_mod)//2], color="darkblue")
-    axs[1, 1].set_title("Modified Audio Spectrum")
-    
     st.pyplot(fig)
-
-def find_max_frequency(data, samplerate):
-    fft_result = np.fft.fft(data)
-    frequencies = np.fft.fftfreq(len(fft_result), d=1/samplerate)
-    positive_frequencies = frequencies[:len(frequencies) // 2]
-    positive_magnitude = np.abs(fft_result[:len(frequencies) // 2])
-    max_freq_index = np.argmax(positive_magnitude)
-    return round(positive_frequencies[max_freq_index], 2)
-
 
 uploaded_file = st.file_uploader("Audio File (.wav)", type=["wav"])
 if uploaded_file:
@@ -224,29 +189,19 @@ if uploaded_file:
         f.write(uploaded_file.getbuffer())
     
     if is_wav_file(file_path):
-        data, samplerate = sf.read(file_path)
-        if len(data.shape) > 1:
-            data = np.mean(data, axis=1)
-        st.write(f"Original Sampling Rate: {samplerate} Hz")
-        max_frequency = find_max_frequency(data, samplerate)
-        st.write(f"Maximum Frequency: {max_frequency} Hz")
+        with wave.open(file_path, "rb") as wav_file:
+            samplerate = wav_file.getframerate()
+            frames = wav_file.readframes(-1)
+            data = np.frombuffer(frames, dtype=np.int16)
         
+        st.write(f"Original Sampling Rate: {samplerate} Hz")
         new_rate = st.number_input("Enter New Sampling Rate (Hz):", min_value=100, max_value=50000, value=samplerate, step=100)
         
         if st.button("Play Original"):
-            play_audio(data, samplerate)
+            play_audio(file_path)
         
-        if st.button("Pause"):
-            pause_audio()
-        
-        if st.button("Play Modified "):
-            modified_data = modify_sampling_rate(data, samplerate, new_rate)
-            play_audio(modified_data, new_rate)
-
-        if st.button("Process Audio"):
+        if st.button("Play Modified"):
             modified_data = modify_sampling_rate(data, samplerate, new_rate)
             plot_audio_signals(data, modified_data, samplerate, new_rate)
-        
-        
     else:
         st.error("The selected file is not a valid .wav file.")
