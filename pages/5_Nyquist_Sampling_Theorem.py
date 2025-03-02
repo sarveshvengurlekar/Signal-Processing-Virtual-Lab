@@ -3,8 +3,6 @@ import matplotlib.pyplot as plt
 import streamlit as st
 import wave
 import base64
-from pydub import AudioSegment
-from pydub.playback import play
 
 st.set_page_config(
     page_title="Signals & Systems Virtual Lab",
@@ -154,17 +152,15 @@ This tool is valuable for **engineers, researchers, and students** in **signal p
 st.header("",divider="blue")
 
 def is_wav_file(file_path):
+    """Check if the file is a valid WAV file."""
     try:
         with wave.open(file_path, 'rb') as wav_file:
             return True
     except (wave.Error, FileNotFoundError):
         return False
 
-def play_audio(file_path):
-    audio = AudioSegment.from_wav(file_path)
-    play(audio)
-
 def modify_sampling_rate(data, original_rate, new_rate):
+    """Resample the audio signal."""
     duration = len(data) / original_rate
     new_length = int(duration * new_rate)
     modified_data = np.interp(
@@ -174,34 +170,40 @@ def modify_sampling_rate(data, original_rate, new_rate):
     ).astype(data.dtype)
     return modified_data
 
-def plot_audio_signals(original_data, modified_data, original_rate, new_rate):
-    fig, axs = plt.subplots(2, 2, figsize=(12, 8))
-    axs[0, 0].plot(original_data[:2000], color="red")
-    axs[0, 0].set_title("Original Audio Signal")
-    axs[1, 0].plot(modified_data[:2000], color="blue")
-    axs[1, 0].set_title("Modified Audio Signal")
-    st.pyplot(fig)
+def save_wav(filename, data, samplerate):
+    """Save the modified WAV file."""
+    with wave.open(filename, 'wb') as wav_file:
+        wav_file.setnchannels(1)  # Mono
+        wav_file.setsampwidth(2)
+        wav_file.setframerate(samplerate)
+        wav_file.writeframes((data * 32767).astype(np.int16).tobytes())
 
-uploaded_file = st.file_uploader("Audio File (.wav)", type=["wav"])
+uploaded_file = st.file_uploader("Upload an Audio File (.wav)", type=["wav"])
 if uploaded_file:
     file_path = f"temp_{uploaded_file.name}"
+    
     with open(file_path, "wb") as f:
         f.write(uploaded_file.getbuffer())
-    
+
     if is_wav_file(file_path):
-        with wave.open(file_path, "rb") as wav_file:
+        with wave.open(file_path, 'rb') as wav_file:
             samplerate = wav_file.getframerate()
-            frames = wav_file.readframes(-1)
-            data = np.frombuffer(frames, dtype=np.int16)
-        
+            num_frames = wav_file.getnframes()
+            audio_data = np.frombuffer(wav_file.readframes(num_frames), dtype=np.int16)
+
         st.write(f"Original Sampling Rate: {samplerate} Hz")
+
         new_rate = st.number_input("Enter New Sampling Rate (Hz):", min_value=100, max_value=50000, value=samplerate, step=100)
         
         if st.button("Play Original"):
-            play_audio(file_path)
-        
-        if st.button("Play Modified"):
-            modified_data = modify_sampling_rate(data, samplerate, new_rate)
-            plot_audio_signals(data, modified_data, samplerate, new_rate)
+            st.audio(file_path, format="audio/wav")
+
+        if st.button("Process & Play Modified"):
+            modified_data = modify_sampling_rate(audio_data, samplerate, new_rate)
+            output_filename = "processed_audio.wav"
+            save_wav(output_filename, modified_data, new_rate)
+            
+            st.audio(output_filename, format="audio/wav")
+
     else:
         st.error("The selected file is not a valid .wav file.")
