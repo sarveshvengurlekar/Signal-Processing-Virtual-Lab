@@ -168,65 +168,13 @@ You can experiment with different filters and audio inputs to better understand 
 """)
 
 
-# File uploader
-uploaded_file = st.file_uploader("Upload a WAV file", type=["wav"])
+video_options = {
+    "LTI": r"Media/LTI.mp4",
+    
+}
 
-# Global variables
-audio = None
-sample_rate = None
-filtered_audio = None
-filter_params = None
+# Dropdown to select video
+selected_video = st.selectbox("Select LTI Video", list(video_options.keys()), index=0)
 
-if uploaded_file is not None:
-    sample_rate, audio = wav.read(uploaded_file)
-    
-    # Convert stereo to mono if needed
-    if audio.ndim > 1:
-        audio = np.mean(audio, axis=1)
-    
-    # Normalize audio
-    audio = audio / np.max(np.abs(audio))
-    
-    st.audio(uploaded_file, format='audio/wav')
-    st.success("Audio file loaded successfully!")
-
-    # Filter selection
-    filter_type = st.selectbox("Select Filter Type", ["Low-Pass", "High-Pass"])
-    nyquist = 0.5 * sample_rate
-    
-    # Cutoff frequency inputs
-    if filter_type in ["Low-Pass", "High-Pass"]:
-        cutoff = st.number_input("Cutoff Frequency (Hz)", min_value=1, max_value=int(nyquist)-1, step=1)
-    # Apply filter button
-    if st.button("Apply Filter"):
-        try:
-            if filter_type == "Low-Pass":
-                normal_cutoff = cutoff / nyquist
-                b, a = signal.butter(6, normal_cutoff, btype='low', analog=False)
-            elif filter_type == "High-Pass":
-                normal_cutoff = cutoff / nyquist
-                b, a = signal.butter(6, normal_cutoff, btype='high', analog=False)
-            
-            # Apply filter
-            filtered_audio = signal.filtfilt(b, a, audio)
-            filter_params = (b, a)
-            
-            # Save filtered audio as WAV
-            sf.write("filtered_audio.wav", filtered_audio, sample_rate)
-            st.success("Filter applied! You can now play the filtered audio.")
-            st.audio("filtered_audio.wav", format='audio/wav')
-        except ValueError:
-            st.error("Invalid input! Please enter valid numeric cutoff values.")
-    
-    # Plot frequency response
-    if filter_params is not None:
-        if st.button("Plot Frequency Response"):
-            b, a = filter_params
-            w, h = signal.freqz(b, a, worN=2000)
-            fig, ax = plt.subplots(figsize=(8, 6))
-            ax.plot(w * nyquist / np.pi, 20 * np.log10(abs(h)), 'black')
-            ax.set_title("Filter Frequency Response")
-            ax.set_xlabel("Frequency (Hz)")
-            ax.set_ylabel("Gain (dB)")
-            ax.grid(color='gray', linestyle='--', linewidth=0.5)
-            st.pyplot(fig)
+# Display selected video
+st.video(video_options[selected_video])
