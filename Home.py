@@ -144,3 +144,360 @@ else:
 # Empty header with blue divider (used for spacing)
 st.header("", divider="blue")
 
+
+linkedin_pranali = "https://www.linkedin.com/in/pranali-choudhari-89aa4215/"
+email_pranali = "mailto:pranali.choudhari@fcrit.ac.in"
+linkedin_sarvesh = "https://www.linkedin.com/in/sarvesh-vengurlekar-"
+email_sarvesh = "mailto:3022170@extc.fcrit.ac.in"
+linkedin_keziah = "https://www.linkedin.com/in/keziah-vinod-948a32340"
+email_keziah = "mailto:3022125@extc.fcrit.ac.in"
+linkedin_riya = "https://www.linkedin.com/in/riya-parab-455118241/"
+email_riya = "mailto:3022168@extc.fcrit.ac.in"
+linkedin_aaditi = "https://www.linkedin.com/in/aaditi-narvekar-5128a2341/"
+email_aaditi = "mailto:3022136@extc.fcrit.ac.in"
+
+
+# UI Design
+col1, col2, col3 = st.columns(3)
+
+with col2:
+    with st.container():
+        st.markdown(
+            f"""
+        <style>
+            .profile-card {{
+                text-align: center;
+                background: #0069FF;
+                padding: 30px;
+                border-radius: 10px;
+                box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+                display: inline-block;
+            }}
+            .name {{
+                font-size: 24px;
+                font-weight: bold;
+                margin-top: 10px;
+                color: white;
+            }}
+            .title {{
+                font-size: 16px;
+                color: white;
+                margin-top: 5px;
+            }}
+            .button-container {{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 10px;
+            }}
+            .button {{
+                background-color: white;
+                border: none;
+                padding: 10px 15px;
+                text-align: center;
+                font-size: 16px;
+                border-radius: 5px;
+                cursor: pointer;
+                text-decoration: none;
+                margin: 5px;
+                display: inline-flex;
+                align-items: center;
+                gap: 10px;
+            }}
+            .linkedin-button {{
+                color: black;
+            }}
+            .icon {{
+                width: 20px;
+                height: 20px;
+            }}
+        </style>
+        <div class="profile-card">
+            <div class="name">Dr. Pranali Choudhari</div>
+            <div class="title">Mentor</div>
+                <a href="{linkedin_pranali}" target="_blank" class="button linkedin-button">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" class="icon">
+                </a>
+                <a href="{email_pranali}" class="button">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" class="icon">
+                </a>
+            </div>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
+st.header(" ")
+
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    with st.container():
+        st.markdown(
+            f"""
+        <style>
+            .profile-card {{
+                text-align: center;
+                background: #0069FF;
+                padding: 30px;
+                border-radius: 10px;
+                box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+                display: inline-block;
+            }}
+            .name {{
+                font-size: 24px;
+                font-weight: bold;
+                margin-top: 10px;
+                color: white;
+            }}
+            .title {{
+                font-size: 16px;
+                color: white;
+                margin-top: 5px;
+            }}
+            .button-container {{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 10px;
+            }}
+            .button {{
+                background-color: white;
+                border: none;
+                padding: 10px 15px;
+                text-align: center;
+                font-size: 16px;
+                border-radius: 5px;
+                cursor: pointer;
+                text-decoration: none;
+                margin: 5px;
+                display: inline-flex;
+                align-items: center;
+                gap: 10px;
+            }}
+            .linkedin-button {{
+                color: black;
+            }}
+            .icon {{
+                width: 20px;
+                height: 20px;
+            }}
+        </style>
+        <div class="profile-card">
+            <div class="name">Sarvesh Udaykumar Vengurlekar</div>
+            <div class="title">Developer</div>
+                <a href="{linkedin_sarvesh}" target="_blank" class="button linkedin-button">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" class="icon">
+                </a>
+                <a href="{email_sarvesh}" class="button">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" class="icon">
+                </a>
+            </div>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+        
+    st.header(" ")
+        
+    with st.container():
+        st.markdown(
+            f"""
+        <style>
+            .profile-card {{
+                text-align: center;
+                background: #0069FF;
+                padding: 30px;
+                border-radius: 10px;
+                box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+                display: inline-block;
+            }}
+            .name {{
+                font-size: 24px;
+                font-weight: bold;
+                margin-top: 10px;
+                color: white;
+            }}
+            .title {{
+                font-size: 16px;
+                color: white;
+                margin-top: 5px;
+            }}
+            .button-container {{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 10px;
+            }}
+            .button {{
+                background-color: white;
+                border: none;
+                padding: 10px 15px;
+                text-align: center;
+                font-size: 16px;
+                border-radius: 5px;
+                cursor: pointer;
+                text-decoration: none;
+                margin: 5px;
+                display: inline-flex;
+                align-items: center;
+                gap: 10px;
+            }}
+            .linkedin-button {{
+                color: black;
+            }}
+            .icon {{
+                width: 20px;
+                height: 20px;
+            }}
+        </style>
+        <div class="profile-card">
+            <div class="name">Keziah Mariam Vinod</div>
+            <div class="title">Developer</div>
+                <a href="{linkedin_keziah}" target="_blank" class="button linkedin-button">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" class="icon">
+                </a>
+                <a href="{email_keziah}" class="button">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" class="icon">
+                </a>
+            </div>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
+
+with col3:
+    with st.container():
+        st.markdown(
+            f"""
+        <style>
+            .profile-card {{
+                text-align: center;
+                background: #0069FF;
+                padding: 30px;
+                border-radius: 10px;
+                box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+                display: inline-block;
+            }}
+            .name {{
+                font-size: 24px;
+                font-weight: bold;
+                margin-top: 10px;
+                color: white;
+            }}
+            .title {{
+                font-size: 16px;
+                color: white;
+                margin-top: 5px;
+            }}
+            .button-container {{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 10px;
+            }}
+            .button {{
+                background-color: white;
+                border: none;
+                padding: 10px 15px;
+                text-align: center;
+                font-size: 16px;
+                border-radius: 5px;
+                cursor: pointer;
+                text-decoration: none;
+                margin: 5px;
+                display: inline-flex;
+                align-items: center;
+                gap: 10px;
+            }}
+            .linkedin-button {{
+                color: black;
+            }}
+            .icon {{
+                width: 20px;
+                height: 20px;
+            }}
+        </style>
+        <div class="profile-card">
+            <div class="name">Riya Ramchandra Parab</div>
+            <div class="title">Developer</div>
+                <a href="{linkedin_riya}" target="_blank" class="button linkedin-button">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" class="icon">
+                </a>
+                <a href="{email_riya}" class="button">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" class="icon">
+                </a>
+            </div>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+        
+    st.header(" ")
+        
+    with st.container():
+        st.markdown(
+            f"""
+        <style>
+            .profile-card {{
+                text-align: center;
+                background: #0069FF;
+                padding: 30px;
+                border-radius: 10px;
+                box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+                display: inline-block;
+            }}
+            .name {{
+                font-size: 24px;
+                font-weight: bold;
+                margin-top: 10px;
+                color: white;
+            }}
+            .title {{
+                font-size: 16px;
+                color: white;
+                margin-top: 5px;
+            }}
+            .button-container {{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 10px;
+            }}
+            .button {{
+                background-color: white;
+                border: none;
+                padding: 10px 15px;
+                text-align: center;
+                font-size: 16px;
+                border-radius: 5px;
+                cursor: pointer;
+                text-decoration: none;
+                margin: 5px;
+                display: inline-flex;
+                align-items: center;
+                gap: 10px;
+            }}
+            .linkedin-button {{
+                color: black;
+            }}
+            .icon {{
+                width: 20px;
+                height: 20px;
+            }}
+        </style>
+        <div class="profile-card">
+            <div class="name">Aaditi Manojkumar Narvekar</div>
+            <div class="title">Developer</div>
+                <a href="{linkedin_aaditi}" target="_blank" class="button linkedin-button">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" class="icon">
+                </a>
+                <a href="{email_aaditi}" class="button">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" class="icon">
+                </a>
+            </div>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
