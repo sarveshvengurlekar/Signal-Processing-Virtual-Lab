@@ -178,7 +178,8 @@ with col2:
         file_name="ECG_sample_sig.mat",
         mime="application/octet-stream"
     )
-
+	
+st.header("", divider="blue")
 
 uploaded_file = st.file_uploader("ECG File (.mat) :", type=["mat"])
 
