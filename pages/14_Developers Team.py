@@ -172,7 +172,7 @@ with col1:
             <a href="{linkedin_sarvesh}" target="_blank">
                 <button style="background-color:#0077b5; color:white; border:none; padding:10px 15px; 
                 text-align:center; font-size:16px; border-radius:5px; cursor:pointer;">
-                    LinkedIn
+                    LinkedIn     
                 </button>
             </a>
         </div>
