@@ -141,7 +141,8 @@ if banner_base64:
 else:
     st.error("Failed to load the banner image. Please check the file path.")
 
-# Empty header with blue divider (used for spacing)
+st.header("")
+
 st.header("</> Developers Team", divider="blue")
 
 st.header("")
