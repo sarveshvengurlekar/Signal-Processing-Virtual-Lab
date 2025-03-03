@@ -153,10 +153,6 @@ This tool is valuable for **engineers, researchers, and students** in **signal p
 st.header("",divider="blue")
 
 video_options = {
-    "4 Point DFT (DIT Type)": r"Media/4_pt_DFT_(DIT).mp4",
-    "4 Point DFT (DIF Type)": r"Media/4_pt_DFT_(DIF).mp4",
-    "8 Point DFT (DIT Type)": r"Media/8_pt_DFT_(DIT).mp4",
-    "8 Point DFT (DIF Type)": r"Media/8_pt_DFT_(DIF).mp4",
     "Nyquist Sampling Theorem" : r"Media/Nyquist (1).mp4",
 }
 
