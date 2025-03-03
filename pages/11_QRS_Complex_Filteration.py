@@ -159,6 +159,25 @@ Combining multiple filtering approaches leads to optimal performance in real-tim
 
 st.header("", divider="blue")
 
+# File paths
+ECG_file_path = "Resources/ECG_sample_sig.mat"
+
+# Read each file separately
+with open(ECG_file_path, "rb") as file:
+    ECG_file_data = file.read()
+
+
+# Column 3 - QRS Filteration
+with col2:
+    st.write("## - QRS Filteration")
+    st.download_button(
+        key="ECG",
+        label="Download Data",
+        data=ECG_file_data,
+        file_name="ECG_sample_sig.mat",
+        mime="application/octet-stream"
+    )
+
 
 uploaded_file = st.file_uploader("ECG File (.mat) :", type=["mat"])
 
