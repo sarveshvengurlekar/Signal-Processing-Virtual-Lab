@@ -135,7 +135,7 @@ with st.container():
         f"""
         <div style="display: flex; flex-direction: column; align-items: center; margin-top: 10px;">
             <a href="{linkedin_pranali}" target="_blank">
-                <button style="background-color:#0077b5; color:white; border:none; padding:10px 15px; 
+                <button style="background-color:#0077b5; color:white; border:none; padding:10px 25px; 
                 text-align:center; font-size:16px; border-radius:5px; cursor:pointer;">
                     LinkedIn
                 </button>
