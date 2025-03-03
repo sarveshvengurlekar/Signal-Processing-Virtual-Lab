@@ -153,7 +153,7 @@ This tool is valuable for **engineers, researchers, and students** in **signal p
 st.header("",divider="blue")
 
 video_options = {
-    "Nyquist": r"Nyquist.mp4"
+    "Nyquist": r"Media/Nyquist.mp4"
 }
 
 # Dropdown to select video
