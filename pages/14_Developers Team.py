@@ -135,9 +135,9 @@ with st.container():
         f"""
         <div style="display: flex; flex-direction: column; align-items: center; margin-top: 10px;">
             <a href="{linkedin_pranali}" target="_blank">
-                <button style="background-color:#0077b5; color:white; border:none; padding:10px 25px; 
+                <button style="background-color:#0077b5; color:white; border:none; padding:10px 15px; 
                 text-align:center; font-size:16px; border-radius:5px; cursor:pointer;">
-                    LinkedIn
+                    Connect on LinkedIn
                 </button>
             </a>
             <br>
@@ -172,7 +172,7 @@ with col1:
             <a href="{linkedin_sarvesh}" target="_blank">
                 <button style="background-color:#0077b5; color:white; border:none; padding:10px 15px; 
                 text-align:center; font-size:16px; border-radius:5px; cursor:pointer;">
-                    LinkedIn     
+                    Connect on LinkedIn     
                 </button>
             </a>
         </div>
@@ -200,7 +200,7 @@ with col1:
             <a href="{linkedin_keziah}" target="_blank">
                 <button style="background-color:#0077b5; color:white; border:none; padding:10px 15px; 
                 text-align:center; font-size:16px; border-radius:5px; cursor:pointer;">
-                    LinkedIn
+                    Connect on LinkedIn
                 </button>
             </a>
         </div>
@@ -228,7 +228,7 @@ with col3:
             <a href="{linkedin_riya}" target="_blank">
                 <button style="background-color:#0077b5; color:white; border:none; padding:10px 15px; 
                 text-align:center; font-size:16px; border-radius:5px; cursor:pointer;">
-                    LinkedIn
+                    Connect on LinkedIn
                 </button>
             </a>
         </div>
@@ -256,7 +256,7 @@ with col3:
             <a href="{linkedin_aaditi}" target="_blank">
                 <button style="background-color:#0077b5; color:white; border:none; padding:10px 15px; 
                 text-align:center; font-size:16px; border-radius:5px; cursor:pointer;">
-                    LinkedIn
+                    Connect on LinkedIn
                 </button>
             </a>
         </div>
