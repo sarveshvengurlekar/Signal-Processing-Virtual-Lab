@@ -153,12 +153,14 @@ This tool is valuable for **engineers, researchers, and students** in **signal p
 st.header("",divider="blue")
 
 video_options = {
-	"Nyquist": r"Media/Nyquist.mp4",
+    "4 Point DFT (DIT Type)": r"Media/4_pt_DFT_(DIT).mp4",
+    "4 Point DFT (DIF Type)": r"Media/4_pt_DFT_(DIF).mp4",
+    "8 Point DFT (DIT Type)": r"Media/8_pt_DFT_(DIT).mp4",
+    "8 Point DFT (DIF Type)": r"Media/8_pt_DFT_(DIF).mp4",
 }
 
 # Dropdown to select video
-selected_video = st.selectbox("Select Video", list(video_options.keys()), index=0)
+selected_video = st.selectbox("Select DFT Video", list(video_options.keys()), index=0)
 
 # Display selected video
 st.video(video_options[selected_video])
-
