@@ -146,4 +146,7 @@ st.header("",divider="blue")
 
 # Ensure the image is responsive and does not exceed the viewable area
 st.image(r"Media/Non_LTI_Th.jpg", use_container_width=True)
+
+st.header("",divider="blue")
+
 st.image(r"Media/Non_LTI.jpg", use_container_width=True)
