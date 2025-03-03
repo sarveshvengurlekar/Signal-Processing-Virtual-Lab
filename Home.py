@@ -144,6 +144,7 @@ else:
 # Empty header with blue divider (used for spacing)
 st.header("", divider="blue")
 
+st.header("")
 
 linkedin_pranali = "https://www.linkedin.com/in/pranali-choudhari-89aa4215/"
 email_pranali = "mailto:pranali.choudhari@fcrit.ac.in"
