@@ -157,8 +157,6 @@ Efficient filtration techniques are essential to enhance ECG signal quality and 
 Combining multiple filtering approaches leads to optimal performance in real-time and offline ECG analysis.
 """)
 
-st.header("", divider="blue")
-
 col1, col2, col3 = st.columns(3)
 
 # File paths
