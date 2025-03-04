@@ -160,7 +160,7 @@ email_aaditi = "mailto:3022136@extc.fcrit.ac.in"
 
 
 # UI Design
-col1, col2, col3, col4 = st.columns(4)
+col1, col2, col3 = st.columns(3)
 
 with col2:
     with st.container():
@@ -230,7 +230,7 @@ with col2:
 
 st.header(" ")
 
-col1, col2, col3 = st.columns(3)
+col1, col2, col3, col4 = st.columns(4)
 
 with col1:
     with st.container():
