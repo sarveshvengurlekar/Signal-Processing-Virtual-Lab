@@ -120,6 +120,6 @@ If y1 (n) = y2 (n), then the system is linear. This means that the output produc
 Example no 01:- y (n) = n x(n)
 
 """)
-
+st.image(r"Media/LTI_Eg_1.png")
 
 st.image(r"Media/Linearity.jpg")
