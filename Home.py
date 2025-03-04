@@ -40,7 +40,7 @@ st.markdown(
         background-color: #0069FF;
         color: #FFFFFF;
         text-align: left;
-        padding: 20px 15px;
+        padding: 20px 30px;
         z-index: 1000;
         overflow: hidden;
         display: flex;
@@ -53,6 +53,11 @@ st.markdown(
         font-size: 30px;
         line-height: 2.5;
     }}
+
+    .main-content {{
+    margin-top: 148px; /* Push content below the fixed header */
+    }}
+
 
     .logo-container {{
         position: absolute;
