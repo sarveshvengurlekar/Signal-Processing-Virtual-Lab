@@ -153,11 +153,11 @@ This tool is valuable for **engineers, researchers, and students** in **signal p
 st.header("",divider="blue")
 
 video_options = {
-    "Nyquist Sampling Theorem" : r"Media/Nyquist (1).mp4",
+    "Nyquist Sampling Theorem" : r"Media/Nyquist (2).mp4",
 }
 
 # Dropdown to select video
-selected_video = st.selectbox("Select DFT Video", list(video_options.keys()), index=0)
+selected_video = st.selectbox("Select Nyquist Video", list(video_options.keys()), index=0)
 
 # Display selected video
 st.video(video_options[selected_video])
