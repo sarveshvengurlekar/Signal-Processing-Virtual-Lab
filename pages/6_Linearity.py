@@ -127,3 +127,8 @@ st.markdown("""
 """)
 
 st.image(r"Media/LTI_Eg_1_Op.png")
+
+
+st.markdown("""
+## **Example no 02:- y (n) = x^2 (n)** 
+""")
