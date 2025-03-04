@@ -151,4 +151,4 @@ st.header("",divider="blue")
 
 st.image(r"Media/Non_LTI_Sin.jpg", use_container_width=True)
 
-st.image(r"Media/Non_LTI_Randn.jpg", use_container_width=True)
+st.image(r"Media/Non_LTI_Randn.png", use_container_width=True)
