@@ -54,6 +54,12 @@ st.markdown(
         line-height: 2.5;
     }}
 
+    .main-content {{
+        margin-top: 120px;  /* Decreased from 148px to 120px */
+        padding: 5px;  /* Reduced padding */
+    }}
+    
+
     .logo-container {{
         position: absolute;
         top: 62px;
