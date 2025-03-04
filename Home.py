@@ -67,7 +67,7 @@ st.markdown(
     }}
 
     .stApp {{
-        margin-top: 50px; /* Push content below the fixed header */
+        margin-top: 146px; /* Push content below the fixed header */
         padding-bottom: 80px; /* Avoid footer overlap */
     }}
 
