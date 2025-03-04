@@ -49,7 +49,7 @@ st.markdown(
     }}
 
     .header h1 {{
-        margin-top: 48px;
+        margin-top: 30px;
         font-size: 30px;
         line-height: 2.5;
     }}
