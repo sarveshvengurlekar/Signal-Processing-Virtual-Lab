@@ -225,9 +225,8 @@ with col2:
                 </a>
             </div>
         </div>
-        """,
-        unsafe_allow_html=True
-    )
+              """,
+        unsafe_allow_html=True)
 
 st.header(" ")
 
@@ -437,7 +436,8 @@ with col3:
     )
         
     st.header(" ")
-        
+    
+with col2:        
     with st.container():
         st.markdown(
             f"""
