@@ -40,7 +40,7 @@ st.markdown(
         background-color: #0069FF;
         color: #FFFFFF;
         text-align: left;
-        padding: 20px 30px;
+        padding: 20px 15px;
         z-index: 1000;
         overflow: hidden;
         display: flex;
@@ -49,7 +49,7 @@ st.markdown(
     }}
 
     .header h1 {{
-        margin-top: 30px;
+        margin-top: 45px;
         font-size: 30px;
         line-height: 2.5;
     }}
