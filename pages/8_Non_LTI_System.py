@@ -149,6 +149,16 @@ st.image(r"Media/Non_LTI_Th.jpg", use_container_width=True)
 
 st.header("",divider="blue")
 
+st.markdown("""
+### Input : Sin Wave
+""")
+
 st.image(r"Media/Non_LTI_Sin.jpg", use_container_width=True)
+
+st.header("",divider="blue")
+
+st.markdown("""
+### Input : Randn Wave
+""")
 
 st.image(r"Media/Non_LTI_Randn.png", use_container_width=True)
