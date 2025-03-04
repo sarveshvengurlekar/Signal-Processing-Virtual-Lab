@@ -128,7 +128,16 @@ st.markdown("""
 
 st.image(r"Media/LTI_Eg_1_Op.png")
 
+st.header("", divider=True)
 
 st.markdown("""
 ## **Example no 02:- y (n) = x^2 (n)** 
 """)
+
+st.image(r"Media/LTI_Eg_2.png")
+
+st.markdown("""
+## Output
+""")
+
+st.image(r"Media/LTI_Eg_2_Op.png")
