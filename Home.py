@@ -55,7 +55,7 @@ st.markdown(
     }}
 
     .main-content {{
-        margin-top: 120px;  /* Decreased from 148px to 120px */
+        margin-top: 50px;  /* Decreased from 148px to 120px */
         padding: 5px;  /* Reduced padding */
     }}
     
@@ -67,7 +67,7 @@ st.markdown(
     }}
 
     .stApp {{
-        margin-top: 146px; /* Push content below the fixed header */
+        margin-top: 50px; /* Push content below the fixed header */
         padding-bottom: 80px; /* Avoid footer overlap */
     }}
 
