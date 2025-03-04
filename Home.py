@@ -301,7 +301,7 @@ with col1:
         
     st.header(" ")
     
-with col4:        
+with col3:        
     with st.container():
         st.markdown(
             f"""
@@ -369,7 +369,7 @@ with col4:
     )
 
 
-with col3:
+with col2:
     with st.container():
         st.markdown(
             f"""
@@ -438,7 +438,7 @@ with col3:
         
     st.header(" ")
     
-with col2:        
+with col4:        
     with st.container():
         st.markdown(
             f"""
