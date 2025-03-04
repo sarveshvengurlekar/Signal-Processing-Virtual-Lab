@@ -122,4 +122,8 @@ Example no 01:- y (n) = n x(n)
 """)
 st.image(r"Media/LTI_Eg_1.png")
 
+st.markdown("""
+# Output
+""")
+
 st.image(r"Media/Linearity.jpg")
