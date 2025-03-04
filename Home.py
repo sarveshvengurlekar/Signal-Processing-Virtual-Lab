@@ -55,7 +55,7 @@ st.markdown(
     }}
 
     .main-content {{
-        margin-top: 146px;  /* Decreased from 148px to 120px */
+        margin-top: 50px;  /* Decreased from 148px to 120px */
         padding: 5px;  /* Reduced padding */
     }}
     
