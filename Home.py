@@ -42,6 +42,7 @@ st.markdown(
         text-align: left;
         padding: 20px 30px;
         z-index: 1000;
+        margin-top: 20px; /* Push content below the fixed header */
         overflow: hidden;
         display: flex;
         align-items: center;
