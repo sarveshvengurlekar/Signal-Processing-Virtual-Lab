@@ -158,13 +158,13 @@ st.header("")
 linkedin_pranali = "https://www.linkedin.com/in/pranali-choudhari-89aa4215/"
 email_pranali = "mailto:pranali.choudhari@fcrit.ac.in"
 linkedin_sarvesh = "https://www.linkedin.com/in/sarvesh-vengurlekar-"
-email_sarvesh = "mailto:3022170@extc.fcrit.ac.in"
+email_sarvesh = "mailto:sarveshvengurlekarwork@gmail.com"
 linkedin_keziah = "https://www.linkedin.com/in/keziah-vinod-948a32340"
-email_keziah = "mailto:3022125@extc.fcrit.ac.in"
+email_keziah = "mailto:keziahvinod2004@gmail.com"
 linkedin_riya = "https://www.linkedin.com/in/riya-parab-455118241/"
-email_riya = "mailto:3022168@extc.fcrit.ac.in"
+email_riya = "mailto:riyaramchandraparab@gmail.com"
 linkedin_aaditi = "https://www.linkedin.com/in/aaditi-narvekar-5128a2341/"
-email_aaditi = "mailto:3022136@extc.fcrit.ac.in"
+email_aaditi = "mailto:aaditinarvekar1001@gmail.com"
 
 
 # UI Design
