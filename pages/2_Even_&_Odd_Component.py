@@ -40,7 +40,7 @@ st.markdown(
     }}
     .header h1 {{ margin-top: 48px; font-size: 30px; line-height: 2.5; }}
     .logo-container {{ position: absolute; top: 62px; right: 20px; }}
-    .stApp {{ margin-top: 146px; padding-bottom: 80px; }}
+    .stApp {{ margin-top: 130px; padding-bottom: 80px; }}
     .footer {{
         position: fixed;
         left: 0;
