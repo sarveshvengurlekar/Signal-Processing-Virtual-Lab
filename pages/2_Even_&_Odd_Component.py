@@ -130,7 +130,7 @@ This tool is ideal for **mathematical signal analysis, engineering applications,
 
 st.header("", divider="blue")
 
-# Define the time variable
+# Define time range
 t = np.linspace(-10, 10, 400)
 
 # Define signal functions
@@ -140,11 +140,9 @@ def signal_sin(t):
 def signal_cos(t):
     return np.cos(t)
 
-def signal_exp(t):
-    return np.exp(-0.1 * t**2)
 
 # Dropdown to select the signal type
-signal_option = st.selectbox("Function:", ['Sine', 'Cosine', 'Exponent'])
+signal_option = st.selectbox("Function:", ['Sine', 'Cosine', 'Signal 1'])
 
 # Function to return the selected signal
 def select_signal(signal_option):
@@ -152,8 +150,10 @@ def select_signal(signal_option):
         return signal_sin
     elif signal_option == 'Cosine':
         return signal_cos
-    elif signal_option == 'Exponent':
-        return signal_exp
+    elif signal_option == 'Signal 1':
+        t_custom = np.array([0, 1, 2, 3, 4, 5])
+        x_custom = np.array([1, 1, 0, 1, 1, 2])
+        return lambda t: np.interp(t, t_custom, x_custom, left=0, right=0)
     else:
         return lambda t: np.zeros_like(t)
 
@@ -178,7 +178,7 @@ ax3.plot(t, odd_signal, label='Odd Component', color='red')
 if st.button("Plot"):
     for ax, title in zip([ax1, ax2, ax3], ['Original Signal', 'Even Component', 'Odd Component']):
         ax.set_xlim(-10, 10)
-        ax.set_ylim(-1.5, 1.5)
+        ax.set_ylim(-1.5, 2.5)
         ax.set_title(title)
         ax.set_xlabel('Time')
         ax.set_ylabel('Amplitude')
