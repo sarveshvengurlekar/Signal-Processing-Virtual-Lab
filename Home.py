@@ -20,8 +20,8 @@ def get_base64_image(image_path):
         return None
 
 # Paths to logo and banner images
-logo_path = r"static/fcritlogo.png"
-banner_path = r"Media/Website_Banner.jpeg"
+logo_path = "static/fcritlogo.png"  # Ensure this path is correct
+banner_path = "Media/Website_Banner.jpeg"  # Ensure this path is correct
 
 # Encode images in Base64
 logo_base64 = get_base64_image(logo_path)
@@ -39,8 +39,8 @@ st.markdown(
         height: 148px;
         background-color: #00b3ff;
         color: #FFFFFF;
-        text-align: left;
-        padding: 20px 30px;
+        text-align: center;
+        padding: 90px 10px;
         z-index: 1000;
         overflow: hidden;
         display: flex;
@@ -48,27 +48,40 @@ st.markdown(
         justify-content: space-between;
     }}
 
-    .header h1 {{
-        margin-top: 45px;
-        font-size: 30px;
-        line-height: 2.5;
-    }}
-
-    .main-content {{
-        margin-top: 1px;  /* Decreased from 148px to 120px */
-        padding-top: 1px;  /* Reduced padding */
+    .header-content {{
+        flex-grow: 1;
+        text-align: center;
     }}
     
 
-    .logo-container {{
-        position: absolute;
-        top: 62px;
-        right: 20px;
+    .header p {{
+        font-family: "Times New Roman", Times, serif;
+        font-size: 15px;
+        line-height: 1.2;
+        margin: 5px 0;
     }}
 
-    .stApp {{
-        margin-top: 146px; /* Push content below the fixed header */
-        padding-bottom: 80px; /* Avoid footer overlap */
+    .header p1 {{
+        font-family: "Times New Roman", Times, serif;
+        font-size: 30px;
+        line-height: 1.2;
+        margin: 5px 0;
+    }}
+
+    .header-content {{
+        flex-grow: 1;
+        text-align: center;
+        padding-top: 50px; /* Adjust this value to move text down */
+    }}
+
+    .logo-container {{
+        padding-right: 20px;
+        padding-top: 60px;
+    }}
+
+    .logo-container img {{
+        width: 100px;
+        height: auto;
     }}
 
     .footer {{
@@ -85,15 +98,20 @@ st.markdown(
         z-index: 1000;
     }}
     </style>
-    
-    <!-- Header section with logo -->
+
+    <!-- Header section with logo on the top-right corner -->
     <div class="header">
-        <h1>Fr. Conceicao Rodrigues Institute of Technology</h1>
+        <div class="header-content">
+            <p><b>AGNEL CHARITIES</b></p>
+            <p1><b>FR. C. RODRIGUES INSTITUTE OF TECHNOLOGY</b></p1>
+            <p>Agnel Technical Education Complex Sector 9-A, Vashi, Navi Mumbai, Maharashtra, India PIN - 400703</p>
+            <p>(An Autonomous Institute & Permanently Affiliated To University Of Mumbai)</p>
+        </div>
         <div class="logo-container">
-            <img src="data:image/png;base64,{logo_base64}" width="75">
+            <img src="data:image/png;base64,{logo_base64}" alt="Institute Logo">
         </div>
     </div>
-    """, 
+    """,
     unsafe_allow_html=True
 )
 
@@ -120,10 +138,8 @@ visibility:hidden;
 st.markdown("""<style>[data-testid="stDecoration"] { display: none; }</style>""", unsafe_allow_html=True)
 st.markdown(hide_menu, unsafe_allow_html=True)  # Apply hidden menu style
 
-
-st.markdown('<div class="main-content">', unsafe_allow_html=True)
 # Display page title with a divider
-st.header("Welcome to Signals & Systems Virtual Lab", divider=True)
+st.header("Welcome to Signals Processing Virtual Lab", divider=True)
 
 # Centered banner image using Base64 encoding
 if banner_base64:
@@ -147,7 +163,8 @@ if banner_base64:
         unsafe_allow_html=True
     )
 else:
-    st.error("Failed to load the banner image. Please check the file path.")
+
+    st.error("Failed to load the banner image. Please check the file path."))
 
 st.header("")
 
