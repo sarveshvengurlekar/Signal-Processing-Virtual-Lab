@@ -37,7 +37,7 @@ st.markdown(
         top: 0;
         width: 100%;
         height: 148px;
-        background-color: #0069FF;
+        background-color: #00b3ff;
         color: #FFFFFF;
         text-align: left;
         padding: 20px 30px;
@@ -77,7 +77,7 @@ st.markdown(
         bottom: 0;
         width: 100%;
         height: 42px;
-        background-color: #0069FF;
+        background-color: #00b3ff;
         color: #FFFFFF;
         text-align: center;
         padding: 10px;
@@ -247,7 +247,7 @@ with col1:
         <style>
             .profile-card {{
                 text-align: center;
-                background: #0069FF;
+                background: #00b3ff;
                 padding: 30px;
                 border-radius: 10px;
                 box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
@@ -316,7 +316,7 @@ with col3:
         <style>
             .profile-card {{
                 text-align: center;
-                background: #0069FF;
+                background: #00b3ff;
                 padding: 30px;
                 border-radius: 10px;
                 box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
@@ -453,7 +453,7 @@ with col4:
         <style>
             .profile-card {{
                 text-align: center;
-                background: #0069FF;
+                background: #00b3ff;
                 padding: 30px;
                 border-radius: 10px;
                 box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
