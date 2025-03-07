@@ -164,8 +164,8 @@ You can experiment with different filters and audio inputs to better understand 
 
 
 video_options = {
-    "LTI Sample Audio 1" : r"Media/LTI_sample_video1.mp4",
-    "LTI Sample Audio 2" : r"Media/LTI_sample_video2.mp4",
+    "LTI Video 1" : r"Media/LTI_sample_video1.mp4",
+    "LTI Video 2" : r"Media/LTI_sample_video2.mp4",
 }
 
 # Dropdown to select video
