@@ -29,7 +29,7 @@ st.markdown(
         top: 0;
         width: 100%;
         height: 148px;
-        background-color: #0069FF;
+        background-color: #00b3ff;
         color: #FFFFFF;
         text-align: left;
         padding: 20px 30px;
@@ -47,7 +47,7 @@ st.markdown(
         bottom: 0;
         width: 100%;
         height: 42px;
-        background-color: #0069FF;
+        background-color: #00b3ff;
         color: #FFFFFF;
         text-align: center;
         padding: 10px;
