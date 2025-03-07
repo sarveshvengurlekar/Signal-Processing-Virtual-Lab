@@ -164,11 +164,12 @@ You can experiment with different filters and audio inputs to better understand 
 
 
 video_options = {
-    "LTI" : r"Media/LTI (3) (1).mp4",
+    "LTI Sample Audio 1" : r"Media/LTI_sample_video1.mp4",
+    "LTI Sample Audio 2" : r"Media/LTI_sample_video2.mp4",
 }
 
 # Dropdown to select video
-selected_video = st.selectbox("Select DFT Video", list(video_options.keys()), index=0)
+selected_video = st.selectbox("Select LTI Video", list(video_options.keys()), index=0)
 
 # Display selected video
 st.video(video_options[selected_video])
