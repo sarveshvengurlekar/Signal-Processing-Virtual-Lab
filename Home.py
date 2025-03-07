@@ -141,30 +141,6 @@ st.markdown(hide_menu, unsafe_allow_html=True)  # Apply hidden menu style
 # Display page title with a divider
 st.header("Welcome to Signals Processing Virtual Lab", divider=True)
 
-# Centered banner image using Base64 encoding
-if banner_base64:
-    st.markdown(
-        f"""
-        <style>
-        .banner-container {{
-            text-align: center;
-            margin-top: 20px;
-        }}
-        .banner-container img {{
-            width: 80%;
-            max-width: 900px;
-            border-radius: 10px;
-        }}
-        </style>
-        <div class="banner-container">
-            <img src="data:image/jpeg;base64,{banner_base64}" alt="Website Banner">
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
-else:
-
-    st.error("Failed to load the banner image. Please check the file path."))
 
 st.header("")
 
