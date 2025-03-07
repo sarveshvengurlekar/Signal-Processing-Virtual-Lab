@@ -123,7 +123,7 @@ st.markdown(hide_menu, unsafe_allow_html=True)  # Apply hidden menu style
 
 st.markdown('<div class="main-content">', unsafe_allow_html=True)
 # Display page title with a divider
-st.header("Welcome to Signals Processing Virtual Lab", divider=True)
+st.header("Welcome to Signals & Systems Virtual Lab", divider=True)
 
 # Centered banner image using Base64 encoding
 if banner_base64:
