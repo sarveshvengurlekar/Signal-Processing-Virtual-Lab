@@ -174,6 +174,29 @@ st.write("""
    - **3rd waveform:** Odd component.
 """)
 
+st.write("## Nyquist Sampling Theorem")
+st.write("""
+1. **Click on Signal Source** to select the source from:
+   - Generate Tone  
+   - Upload Audio File (.wav)
+
+2. If you selected **Generate Tone**, then Tone Generation parameters will appear, where a **sine wave** is generated.
+
+3. You can set the **Maximum Frequency**, **Sampling Rate**, and **Duration** of the generated tone.
+
+4. If you selected **Upload Audio File (.wav)**:
+   - Upload a **.wav** audio file from your desktop.  
+   - If you don’t have a **.wav** file, use the provided audio in the **Nyquist Sampling Theorem** section.
+
+5. After selecting the **Signal Source**, scroll down to enter the sampling frequency for:
+   - **Undersampling** (Fs < Fm)  
+   - **Critical Sampling** (Fs = Fm)  
+   - **Oversampling** (Fs > 2Fm)  
+
+6. After entering the frequency values, **play the audio** and analyze the **Time Domain** and **Frequency Domain** plots of the signal.
+""")
+
+
 st.write("## - Autocorrelation")
 st.write("""
 1. Click on the Autocorrelation section
