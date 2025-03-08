@@ -187,7 +187,7 @@ This tool is valuable for **engineers, researchers, and students** in **signal p
 """)
 
 # Define the local file path
-local_file_path = "audio2 (2).wav"  # Update this with the correct path
+local_file_path = "Media/audio2 (2).wav"  # Update this with the correct path
 
 # Read the file in binary mode
 with open(local_file_path, "rb") as file:
@@ -197,7 +197,7 @@ with open(local_file_path, "rb") as file:
 st.download_button(
     label="Download Audio File",
     data=wav_bytes,
-    file_name="downloaded_audio.wav",
+    file_name="Sampling_audio.wav",
     mime="audio/wav")
 
 st.header("",divider="blue")
