@@ -3,6 +3,7 @@ primaryColor="#091eaa"
 backgroundColor="#fdfffd"
 secondaryBackgroundColor="#00b3ff"
 textColor="#000000"
+font ="timesnewroman"
 
 
 [client]
