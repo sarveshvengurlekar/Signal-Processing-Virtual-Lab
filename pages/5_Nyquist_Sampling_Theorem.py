@@ -239,7 +239,7 @@ elif input_method == "Generate Tone":
     sample_rate = 44100
     t = np.linspace(0, duration, int(sample_rate * duration), endpoint=False)
     audio_data = 0.5 * np.sin(2 * np.pi * frequency * t)
-    st.write(f"Generated Tone: {frequency} Hz | {duration} sec")
+    st.write(f"Generated Tone: Sine |{frequency} Hz | {duration} sec")
 
 # Function to calculate maximum frequency using FFT
 def get_max_frequency(audio_data, sample_rate):
