@@ -4,7 +4,7 @@ import os  # Import os to check file paths
 
 # Set Streamlit page configuration
 st.set_page_config(
-    page_title="Signals & Systems Virtual Lab",
+    page_title="Signal Processing Virtual Lab",
     layout="wide",
     page_icon=" "  # Placeholder for page icon
 )
@@ -143,9 +143,9 @@ st.markdown("""<style>[data-testid="stDecoration"] { display: none; }</style>"""
 st.markdown(hide_menu, unsafe_allow_html=True)  # Apply hidden menu style
 
 # Display page title with a divider
-st.header("Welcome to Signals & Systems Virtual Lab", divider=True)
+st.header("Welcome to Signal Processing Virtual Lab", divider=True)
 
-st.markdown("<h1 style='text-align: center; color: turquoise;'> Our Vision </h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; color: black;'> Our Vision </h1>", unsafe_allow_html=True)
 st.markdown(
     "<p style='font-size:28px; text-align: justify;'>"
     "The <b>Signal Processing Virtual Lab</b> is a digital learning platform designed by <b>Fr. C. Rodrigues Institute of Technology</b> to bridge the gap "
@@ -161,7 +161,7 @@ st.markdown(
 st.markdown("<br>", unsafe_allow_html=True)
 
 # Key Features with Increased Text Size
-st.markdown("<h1 style='color: turquoise;'> • Key Features</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='color: black;'> • Key Features</h1>", unsafe_allow_html=True)
 
 features = [
     "<b>Interactive Learning:</b> Explore and visualize fundamental signal processing concepts through simulations.",
