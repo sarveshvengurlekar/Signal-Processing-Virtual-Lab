@@ -174,7 +174,7 @@ st.write("""
    - **3rd waveform:** Odd component.
 """)
 
-st.write("## Nyquist Sampling Theorem")
+st.write("## - Nyquist Sampling Theorem")
 st.write("""
 1. **Click on Signal Source** to select the source from:
    - Generate Tone  
