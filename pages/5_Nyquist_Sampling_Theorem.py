@@ -186,6 +186,20 @@ st.markdown("""
 This tool is valuable for **engineers, researchers, and students** in **signal processing, telecommunications, and real-time system design**.
 """)
 
+# Define the local file path
+local_file_path = "audio2 (2).wav"  # Update this with the correct path
+
+# Read the file in binary mode
+with open(local_file_path, "rb") as file:
+    wav_bytes = file.read()
+    # Streamlit download button
+
+st.download_button(
+    label="Download Audio File",
+    data=wav_bytes,
+    file_name="downloaded_audio.wav",
+    mime="audio/wav")
+
 st.header("",divider="blue")
 
 
@@ -211,21 +225,6 @@ sample_rate = 44100  # Default sample rate
 if input_method == "Upload Audio File (.wav)":
     upload_file = st.file_uploader("Upload an audio file (WAV)", type=["wav"])
 
-    # Define the local file path
-    local_file_path = "audio2 (2).wav"  # Update this with the correct path
-
-    # Read the file in binary mode
-    with open(local_file_path, "rb") as file:
-        wav_bytes = file.read()
-    # Streamlit download button
-    st.download_button(
-        label="Download Audio File",
-        data=wav_bytes,
-        file_name="downloaded_audio.wav",
-        mime="audio/wav")
-
-
-    
     if upload_file:
         audio_data, sample_rate = sf.read(upload_file)
         if audio_data.ndim > 1:
