@@ -143,7 +143,7 @@ st.markdown("""<style>[data-testid="stDecoration"] { display: none; }</style>"""
 st.markdown(hide_menu, unsafe_allow_html=True)  # Apply hidden menu style
 
 # Display page title with a divider
-st.header("Welcome to Signals Processing Virtual Lab", divider=True)
+st.header("Welcome to Signals & Systems Virtual Lab", divider=True)
 
 
 st.header("")
