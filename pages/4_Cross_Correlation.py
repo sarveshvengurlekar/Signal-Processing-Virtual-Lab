@@ -5,7 +5,7 @@ import base64
 
 # Set Streamlit page configuration
 st.set_page_config(
-    page_title="Signals & Systems Virtual Lab",
+    page_title="Signal Processing Virtual Lab",
     layout="wide",
     page_icon=" "  # Placeholder for page icon
 )
