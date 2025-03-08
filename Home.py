@@ -145,6 +145,7 @@ st.markdown(hide_menu, unsafe_allow_html=True)  # Apply hidden menu style
 # Display page title with a divider
 st.header("Welcome to Signals & Systems Virtual Lab", divider=True)
 
+st.image("Media/Home_page-0001.jpg")
 
 st.header("")
 
