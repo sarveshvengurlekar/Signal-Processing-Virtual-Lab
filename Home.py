@@ -142,8 +142,6 @@ visibility:hidden;
 st.markdown("""<style>[data-testid="stDecoration"] { display: none; }</style>""", unsafe_allow_html=True)
 st.markdown(hide_menu, unsafe_allow_html=True)  # Apply hidden menu style
 
-# Display page title with a divider
-st.header("Welcome to Signal Processing Virtual Lab", divider=True)
 
 st.markdown("<h1 style='text-align: center; color: black;'> Our Vision </h1>", unsafe_allow_html=True)
 st.markdown(
