@@ -145,7 +145,36 @@ st.markdown(hide_menu, unsafe_allow_html=True)  # Apply hidden menu style
 # Display page title with a divider
 st.header("Welcome to Signals & Systems Virtual Lab", divider=True)
 
-st.image("Media/Home_page-0001.jpg")
+st.markdown("<h1 style='text-align: center; color: darkblue;'> Our Vision </h1>", unsafe_allow_html=True)
+st.markdown(
+    "<p style='font-size:28px; text-align: justify;'>"
+    "The <b>Signal Processing Virtual Lab</b> is a digital learning platform designed by <b>Fr. C. Rodrigues Institute of Technology</b> to bridge the gap "
+    "between theoretical concepts and practical visualization in signal processing. By providing an "
+    "interactive environment, it enables users to analyze, observe, and understand various signal "
+    "characteristics through real-time graphical representations. "
+    "This platform overcomes geographical and resource limitations, ensuring wider accessibility "
+    "to high-quality education in signal processing."
+    "</p>",
+    unsafe_allow_html=True
+)
+
+st.markdown("<br>", unsafe_allow_html=True)
+
+# Key Features with Increased Text Size
+st.markdown("<h1 style='color: darkblue;'> • Key Features</h1>", unsafe_allow_html=True)
+
+features = [
+    "<b>Interactive Learning:</b> Explore and visualize fundamental signal processing concepts through simulations.",
+    "<b>Dynamic Visualizations:</b> Gain insights into signal behavior with real-time graphical representations.",
+    "<b>Unrestricted Accessibility:</b> Access the lab anytime, anywhere, without the need for physical equipment.",
+    "<b>Conceptual Clarity:</b> Strengthen understanding of signal properties, transformations, and system behavior.",
+    "<b>Bridging Theory and Visualization:</b> Enhance learning by observing how theoretical concepts translate into signal representations."
+]
+
+# Display Key Features with Larger Font
+for feature in features:
+    st.markdown(f"<p style='font-size:28px;'>- {feature}</p>", unsafe_allow_html=True)
+
 
 st.header("")
 
