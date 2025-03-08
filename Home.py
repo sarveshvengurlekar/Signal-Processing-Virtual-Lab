@@ -145,7 +145,7 @@ st.markdown(hide_menu, unsafe_allow_html=True)  # Apply hidden menu style
 # Display page title with a divider
 st.header("Welcome to Signals & Systems Virtual Lab", divider=True)
 
-st.markdown("<h1 style='text-align: center; color: cyan;'> Our Vision </h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; color: turquoise;'> Our Vision </h1>", unsafe_allow_html=True)
 st.markdown(
     "<p style='font-size:28px; text-align: justify;'>"
     "The <b>Signal Processing Virtual Lab</b> is a digital learning platform designed by <b>Fr. C. Rodrigues Institute of Technology</b> to bridge the gap "
@@ -161,7 +161,7 @@ st.markdown(
 st.markdown("<br>", unsafe_allow_html=True)
 
 # Key Features with Increased Text Size
-st.markdown("<h1 style='color: cyan;'> • Key Features</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='color: turquoise;'> • Key Features</h1>", unsafe_allow_html=True)
 
 features = [
     "<b>Interactive Learning:</b> Explore and visualize fundamental signal processing concepts through simulations.",
