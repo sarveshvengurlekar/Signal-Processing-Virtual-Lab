@@ -203,7 +203,7 @@ with open(ECG_file_path, "rb") as file:
 
 
 # Column 3 - QRS Filteration
-with col2:
+with col1:
     st.download_button(
         key="ECG",
         label="Download ECG Data",
