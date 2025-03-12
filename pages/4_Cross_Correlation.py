@@ -85,7 +85,7 @@ st.markdown(
         height: auto;
     }}
     .stApp {{
-        margin-top: 100px; /* Push content below the fixed header */
+        margin-top: 180px; /* Push content below the fixed header */
         padding-bottom: 80px; /* Avoid footer overlap */
     }}
 
