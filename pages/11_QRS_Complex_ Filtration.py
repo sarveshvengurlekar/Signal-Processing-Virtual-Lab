@@ -148,7 +148,7 @@ st.markdown(hide_menu, unsafe_allow_html=True)  # Apply hidden menu style
 st.markdown(hide_menu, unsafe_allow_html=True)
 
 # Streamlit UI to select .mat file
-st.header("QRS Complex Filteration",divider=True)
+st.header("QRS Complex Filtration",divider=True)
 
 st.markdown("""
 The **QRS complex** is a crucial component of an Electrocardiogram (ECG) signal, representing ventricular 
