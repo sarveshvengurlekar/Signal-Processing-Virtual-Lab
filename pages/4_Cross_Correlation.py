@@ -224,15 +224,15 @@ if st.button("Plot"):
     fig, axs = plt.subplots(3, 1, figsize=(13, 15))
     
     axs[0].plot(t, signal1, color='darkblue')
-    axs[0].set_title(f'Original {signal_choice.capitalize()} Signal')
+    axs[0].set_title(f'Original Signal ({signal_choice.capitalize()} Waveform)')
     axs[0].grid()
     
     axs[1].plot(t, signal2, color='red')
-    axs[1].set_title('Noisy Signal')
+    axs[1].set_title('Original Signal + Noise')
     axs[1].grid()
     
     axs[2].plot(lags, corr_result, color='darkgreen')
-    axs[2].set_title('Cross-Correlation Result')
+    axs[2].set_title('Cross-Correlation Result of Original Signal and Original Signal + Noise')
     axs[2].set_xlabel('Lags')
     axs[2].set_ylabel('Cross-Correlation')
     axs[2].grid()
