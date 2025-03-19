@@ -146,7 +146,7 @@ st.markdown(hide_menu, unsafe_allow_html=True)  # Apply hidden menu style
 st.markdown("<h1 style='text-align: center; color: black;'> Our Vision </h1>", unsafe_allow_html=True)
 st.markdown(
     "<p style='font-size:28px; text-align: justify;'>"
-    "The Signal Processing Virtual Lab is an advanced digital learning platform developed by the Electronics & Telecommunication Department of Fr. C. Rodrigues Institute of Technology." 
+    "The <b>Signal Processing Virtual Lab</b> is an advanced digital learning platform developed by the <b>Electronics & Telecommunication Department of Fr. C. Rodrigues Institute of Technology</b>." 
     "It is designed to bridge the gap between theoretical concepts and practical applications in signal processing by offering an interactive and immersive learning experience."
     "By leveraging state-of-the-art computational tools, the platform allows users to analyze, observe, and interpret various signal characteristics through real-time graphical representations." 
     "This hands-on approach enhances conceptual understanding and fosters deeper insights into fundamental and advanced signal processing techniques." 
