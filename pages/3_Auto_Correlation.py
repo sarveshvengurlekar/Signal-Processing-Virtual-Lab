@@ -231,16 +231,16 @@ if st.button("Plot"):
 
     fig, axs = plt.subplots(4, 1, figsize=(10, 20))
     axs[0].plot(t, signal1, color='darkblue')
-    axs[0].set_title(f'Original {signal_choice.capitalize()} Wave Signal')
+    axs[0].set_title(f'Original Signal ({signal_choice.capitalize()} Waveform)')
     axs[0].grid()
     
     axs[1].plot(t, signal2, color='red')
-    axs[1].set_title('Noisy Signal')
+    axs[1].set_title('Original Signal + Noise')
     axs[1].grid()
     
     axs[2].plot(lags, auto_corr_signal1, label='Clean Signal', color='darkblue')
     axs[2].plot(lags, auto_corr_signal2, label='Noisy Signal', color='red')
-    axs[2].set_title('Autocorrelation Results')
+    axs[2].set_title('Autocorrelation Results of Original Signal and Original+Noise')
     axs[2].set_xlabel('Lags')
     axs[2].legend()
     axs[2].grid()
