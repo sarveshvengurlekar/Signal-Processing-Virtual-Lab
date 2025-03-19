@@ -152,7 +152,7 @@ st.markdown(
     "This hands-on approach enhances conceptual understanding and fosters deeper insights into fundamental and advanced signal processing techniques." 
     "Users can engage with a wide range of signal transformations, filtering methods, spectral analysis, and system responses, providing a comprehensive learning experience."
     "The platform is particularly beneficial for academic institutions, enabling seamless integration into coursework, laboratory exercises, and research projects." 
-    "Additionally, it supports self-paced learning, allowing users to experiment with different signal processing operations, 
+    "Additionally, it supports self-paced learning, allowing users to experiment with different signal processing operations," 
     "visualize real-time changes, and develop a practical understanding of abstract mathematical concepts."
     "</p>",
     unsafe_allow_html=True
