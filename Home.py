@@ -145,26 +145,25 @@ st.markdown(hide_menu, unsafe_allow_html=True)  # Apply hidden menu style
 
 st.markdown("<h1 style='text-align: center; color: black;'> Our Vision </h1>", unsafe_allow_html=True)
 st.markdown(
-    """
-    <p style='font-size:28px; text-align: justify;'>
-    The <b>Signal Processing Virtual Lab</b> is an advanced digital learning platform developed by the 
-    <b>Electronics & Telecommunication Department of Fr. C. Rodrigues Institute of Technology.</b>\n
-    It is designed to bridge the gap between theoretical concepts and practical applications in signal processing 
-    by offering an interactive and immersive learning experience.\n
-    By leveraging state-of-the-art computational tools, the platform allows users to analyze, observe, and interpret 
-    various signal characteristics through real-time graphical representations.\n
-    This hands-on approach enhances conceptual understanding and fosters deeper insights into fundamental and 
-    advanced signal processing techniques.\n
-    Users can engage with a wide range of signal transformations, filtering methods, spectral analysis, and 
-    system responses, providing a comprehensive learning experience.\n
-    The platform is particularly beneficial for academic institutions, enabling seamless integration into coursework, 
-    laboratory exercises, and research projects.\n
-    Additionally, it supports self-paced learning, allowing users to experiment with different signal processing 
-    operations, visualize real-time changes, and develop a practical understanding of abstract mathematical concepts.
-    </p>
-    """,
+    "<p style='font-size:28px; text-align: justify;'>"
+    "<span style='display: block;'>The <b>Signal Processing Virtual Lab</b> is an advanced digital learning platform developed by the "
+    "<b>Electronics & Telecommunication Department of Fr. C. Rodrigues Institute of Technology.</b></span>"  
+    "<span style='display: block;'>It is designed to bridge the gap between theoretical concepts and practical applications in signal processing "
+    "by offering an interactive and immersive learning experience.</span>"
+    "<span style='display: block;'>By leveraging state-of-the-art computational tools, the platform allows users to analyze, observe, and interpret "
+    "various signal characteristics through real-time graphical representations.</span>" 
+    "<span style='display: block;'>This hands-on approach enhances conceptual understanding and fosters deeper insights into fundamental and "
+    "advanced signal processing techniques.</span>" 
+    "<span style='display: block;'>Users can engage with a wide range of signal transformations, filtering methods, spectral analysis, and "
+    "system responses, providing a comprehensive learning experience.</span>"
+    "<span style='display: block;'>The platform is particularly beneficial for academic institutions, enabling seamless integration into coursework, "
+    "laboratory exercises, and research projects.</span>" 
+    "<span style='display: block;'>Additionally, it supports self-paced learning, allowing users to experiment with different signal processing "
+    "operations, visualize real-time changes, and develop a practical understanding of abstract mathematical concepts.</span>"
+    "</p>",
     unsafe_allow_html=True
 )
+
 
 
 st.markdown("<br>", unsafe_allow_html=True)
