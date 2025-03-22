@@ -255,6 +255,11 @@ if audio_data is not None:
     max_freq = get_max_frequency(audio_data, sample_rate)
     st.write(f"Maximum Frequency Component: {max_freq:.2f} Hz")
 
+    # Add original audio playback
+    st.subheader("Original Audio")
+    st.write("🔊 Original Signal")
+    st.audio(convert_to_wav(audio_data, sample_rate), format="audio/wav")
+
     # Sampling parameters
     default_Fs_under = int(max_freq / 1.5)  # Undersampling (Aliasing)
     default_Fs_critical = int(max_freq)  # Critical sampling
