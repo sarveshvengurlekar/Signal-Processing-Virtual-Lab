@@ -141,6 +141,7 @@ visibility:hidden;
 st.markdown("""<style>[data-testid="stDecoration"] { display: none; }</style>""", unsafe_allow_html=True)
 st.markdown(hide_menu, unsafe_allow_html=True)  # Apply hidden menu style
 
+st.header("Convolution", divider=True)
 
 # Step 1
 st.write("Step 1: Function f1(t) and Sliding f2(t)tau")
