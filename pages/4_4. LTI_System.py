@@ -185,11 +185,11 @@ This process allows you to observe how different filters affect the frequency sp
 
 #### Example: Effect of Low-Pass Filter
 
-A Low-Pass Filter with a cutoff frequency of \( 500 \, \text{Hz} \) would attenuate frequencies above \( 500 \, \text{Hz} \), allowing only the lower frequencies to pass. This would be useful for removing high-frequency noise from a recording.
+A Low-Pass Filter with a cutoff frequency of \( 500 \, Hz \) would attenuate frequencies above \( 500 \, Hz \), allowing only the lower frequencies to pass. This would be useful for removing high-frequency noise from a recording.
 
 #### Example: Effect of High-Pass Filter
 
-A High-Pass Filter with a cutoff frequency of \( 50 \, \text{Hz} \) would block any frequencies below \( 50 \, \text{Hz} \), making it ideal for removing low-frequency hums or rumble.
+A High-Pass Filter with a cutoff frequency of \( 50 \, Hz} \) would block any frequencies below \( 50 \, Hz \), making it ideal for removing low-frequency hums or rumble.
 
 ---
 
