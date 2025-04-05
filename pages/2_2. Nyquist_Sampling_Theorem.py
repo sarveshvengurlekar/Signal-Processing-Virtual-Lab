@@ -234,7 +234,7 @@ if input_method == "Upload Audio File (.wav)":
 # Handle sine wave generation
 elif input_method == "Generate Tone":
     st.header("Tone Generator")
-    frequency = st.number_input("Tone Frequency (Hz)", 50, 5000, 1000)
+    frequency = st.number_input("Tone Frequency (Hz)", 50, 8000, 2500)
     duration = st.slider("Duration (seconds)", 1, 5, 2)
     sample_rate = 44100
     t = np.linspace(0, duration, int(sample_rate * duration), endpoint=False)
