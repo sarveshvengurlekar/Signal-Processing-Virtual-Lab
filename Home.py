@@ -1,5 +1,6 @@
 import streamlit as st  # Import Streamlit for web app creation
 import os  # Import os to check file paths
+import base64
 
 # Set Streamlit page configuration
 st.set_page_config(
