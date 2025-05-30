@@ -12,6 +12,35 @@ st.set_page_config(
     page_icon=" "  # Placeholder for page icon
 )
 
+# Inject custom CSS for scrollbar styling
+st.markdown("""
+    <style>
+    /* Scrollbar track */
+    ::-webkit-scrollbar {
+        width: 16px;  
+        height: 16px; 
+    }
+
+    /* Scrollbar thumb (the draggable part) */
+    ::-webkit-scrollbar-thumb {
+        background-color: #888;
+        border-radius: 8px;
+        border: 3px solid transparent;
+        background-clip: content-box;
+    }
+
+    /* Scrollbar thumb on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: #555;
+    }
+
+    /* Scrollbar track */
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+    </style>
+""", unsafe_allow_html=True)
+
 # Function to encode an image as a Base64 string
 def get_base64_image(image_path):
     """Encodes an image file to Base64 format."""
