@@ -295,8 +295,8 @@ if audio_data is not None:
     default_Fs_critical = int(max_freq)  # Critical sampling
     default_Fs_over = int(2.5 * max_freq)  # Oversampling (No Aliasing)
 
-    Fs_under = st.number_input("Undersampling Frequency (Fs < Fm)", min_value=1, value=default_Fs_under)
-    Fs_critical = st.number_input("Critical Sampling Frequency (Fs = Fm)", min_value=1, value=default_Fs_critical)
+    Fs_under = st.number_input("Undersampling Frequency (Fs < 2Fm)", min_value=1, value=default_Fs_under)
+    Fs_critical = st.number_input("Critical Sampling Frequency (Fs = 2Fm)", min_value=1, value=default_Fs_critical)
     Fs_over = st.number_input("Oversampling Frequency (Fs > 2Fm)", min_value=1, value=default_Fs_over)
     
     sampling_rates = [Fs_under, Fs_critical, Fs_over]
@@ -311,50 +311,4 @@ if audio_data is not None:
         reconstructed_signal = np.interp(np.arange(len(audio_data)), sample_indices, sampled_signal)
         st.write(f"🔊 {titles[i]} (Fs = {Fs} Hz)")
         st.audio(convert_to_wav(reconstructed_signal, sample_rate), format="audio/wav")
-        
-    '''    
-    # Function to plot time-domain signal
-    def plot_time_domain(audio_signal, sample_rate, title, ax, color):
-        N = min(1500, len(audio_signal))  # Only first 1500 samples
-        t = np.linspace(0, N / sample_rate, num=N)
-        ax.plot(t, audio_signal[:N], color=color)
-        ax.set_xlabel("Time (s)")
-        ax.set_ylabel("Amplitude")
-        ax.set_title(title)
-
-    # Function to plot frequency spectrum
-    def plot_frequency_spectrum(audio_signal, sample_rate, title, ax, color):
-        N = len(audio_signal)
-        fft_data = np.fft.fft(audio_signal)
-        fft_freqs = np.fft.fftfreq(N, 1 / sample_rate)
-        positive_freqs = fft_freqs[:N // 2]
-        positive_fft_data = np.abs(fft_data[:N // 2])
-        ax.plot(positive_freqs, positive_fft_data, color=color)
-        ax.set_xlabel("Frequency (Hz)")
-        ax.set_ylabel("Magnitude")
-        ax.set_title(title)
-        ax.set_xlim(0, sample_rate / 2)
-
-    # Create 4x2 Subplots (Time Domain & Frequency Domain)
-    fig, axs = plt.subplots(4, 2, figsize=(16, 16))
-
-    # Original Signal (Time Domain & Frequency Domain)
-    plot_time_domain(audio_data, sample_rate, "Original Signal (Time Domain)", axs[0, 0], "darkviolet")
-    plot_frequency_spectrum(audio_data, sample_rate, "Original Signal Spectrum", axs[0, 1], "darkviolet")
-
-    # Plot sampled signal (Time domain & Frequency domain)
-    for i, Fs in enumerate(sampling_rates):
-        sample_indices = np.arange(0, len(audio_data), sample_rate // Fs)
-        sampled_signal = audio_data[sample_indices]
-        reconstructed_signal = np.interp(np.arange(len(audio_data)), sample_indices, sampled_signal)
-
-        # Time-domain plots (left column)
-        plot_time_domain(reconstructed_signal, sample_rate, f"{titles[i]} (Time Domain)", axs[i+1, 0], colors[i])
-
-        # Frequency-domain plots (right column)
-        plot_frequency_spectrum(reconstructed_signal, sample_rate, f"{titles[i]} Spectrum", axs[i+1, 1], colors[i])
-
-    # Adjust layout and display plot at the end
-    plt.tight_layout()
-    st.pyplot(fig)
-'''
+ 
