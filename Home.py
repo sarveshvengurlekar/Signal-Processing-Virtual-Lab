@@ -216,15 +216,15 @@ st.header("</> Developers Team", divider="blue")
 st.header("")
 
 linkedin_pranali = "https://www.linkedin.com/in/pranali-choudhari-89aa4215/"
-email_pranali = "mailto:pranali.choudhari@fcrit.ac.in"
+email_pranali = "mailto:pranali.choudhari@fcrit.ac.in?subject=Sharing Feedback and Connection Request Regarding FCRIT’s Signal Processing Virtual Lab."
 linkedin_sarvesh = "https://www.linkedin.com/in/sarvesh-vengurlekar-"
-email_sarvesh = "mailto:sarveshvengurlekarwork@gmail.com"
+email_sarvesh = "mailto:sarveshvengurlekarwork@gmail.com?subject=Sharing Feedback and Connection Request Regarding FCRIT’s Signal Processing Virtual Lab."
 linkedin_keziah = "https://www.linkedin.com/in/keziah-vinod-948a32340"
-email_keziah = "mailto:keziahvinod2004@gmail.com"
+email_keziah = "mailto:keziahvinod2004@gmail.com?subject=Sharing Feedback and Connection Request Regarding FCRIT’s Signal Processing Virtual Lab."
 linkedin_riya = "https://www.linkedin.com/in/riya-parab-455118241/"
-email_riya = "mailto:riyaramchandraparab@gmail.com"
+email_riya = "mailto:riyaramchandraparab@gmail.com?subject=Sharing Feedback and Connection Request Regarding FCRIT’s Signal Processing Virtual Lab."
 linkedin_aaditi = "https://www.linkedin.com/in/aaditi-narvekar-5128a2341/"
-email_aaditi = "mailto:aaditinarvekar1001@gmail.com"
+email_aaditi = "mailto:aaditinarvekar1001@gmail.com?subject=Sharing Feedback and Connection Request Regarding FCRIT’s Signal Processing Virtual Lab."
 
 
 # UI Design
