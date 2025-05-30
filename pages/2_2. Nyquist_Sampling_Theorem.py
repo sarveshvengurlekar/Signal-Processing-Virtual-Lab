@@ -311,7 +311,8 @@ if audio_data is not None:
         reconstructed_signal = np.interp(np.arange(len(audio_data)), sample_indices, sampled_signal)
         st.write(f"🔊 {titles[i]} (Fs = {Fs} Hz)")
         st.audio(convert_to_wav(reconstructed_signal, sample_rate), format="audio/wav")
-
+        
+    '''    
     # Function to plot time-domain signal
     def plot_time_domain(audio_signal, sample_rate, title, ax, color):
         N = min(1500, len(audio_signal))  # Only first 1500 samples
@@ -356,4 +357,4 @@ if audio_data is not None:
     # Adjust layout and display plot at the end
     plt.tight_layout()
     st.pyplot(fig)
-
+'''
