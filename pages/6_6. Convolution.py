@@ -151,7 +151,7 @@ st.markdown(
 st.markdown(
     """
     <div class="footer">
-        <p>© 2025 Fr. Conceicao Rodrigues Institute of Technology. All rights reserved.</p>
+        <p>© Fr. Conceicao Rodrigues Institute of Technology. All rights reserved.</p>
     </div>
     """, 
     unsafe_allow_html=True
