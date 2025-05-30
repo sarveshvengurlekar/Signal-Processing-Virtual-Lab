@@ -184,7 +184,7 @@ If y1 (n) = y2 (n), then the system is linear. This means that the output produc
 ## **Example no 01:- y (n) = n x(n)**
 
 """)
-st.image(r"Media/LTI_Eg_1.png, caption="Reference : Signals & Systems By A. Nagoor Kani")
+st.image(r"Media/LTI_Eg_1.png", caption="Reference : Signals & Systems By A. Nagoor Kani")
 
 st.markdown("""
 ## Output
@@ -198,7 +198,7 @@ st.markdown("""
 ## **Example no 02:- y (n) = x^2 (n)** 
 """)
 
-st.image(r"Media/LTI_Eg_2.png", caption="Reference : Signals & Systems By A. Nagoor Kani")
+st.image(r"Media/LTI_Eg_2.png")
 
 st.markdown("""
 ## Output
