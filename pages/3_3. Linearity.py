@@ -198,7 +198,7 @@ st.markdown("""
 ## **Example no 02:- y (n) = x^2 (n)** 
 """)
 
-st.image(r"Media/LTI_Eg_2.png")
+st.image(r"Media/LTI_Eg_2.png", caption="Reference : Signals & Systems By A. Nagoor Kani")
 
 st.markdown("""
 ## Output
