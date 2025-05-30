@@ -1,5 +1,4 @@
 import streamlit as st  # Import Streamlit for web app creation
-import base64  # Import base64 for encoding images
 import os  # Import os to check file paths
 
 # Set Streamlit page configuration
@@ -152,7 +151,7 @@ st.markdown(
 st.markdown(
     """
     <div class="footer">
-        <p>© 2025 Fr. Conceicao Rodrigues Institute of Technology. All rights reserved.</p>
+        <p>© Fr. Conceicao Rodrigues Institute of Technology. All rights reserved.</p>
     </div>
     """, 
     unsafe_allow_html=True
