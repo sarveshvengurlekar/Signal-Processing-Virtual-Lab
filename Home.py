@@ -14,7 +14,7 @@ st.markdown("""
     <style>
     /* Scrollbar track */
     ::-webkit-scrollbar {
-        width: 32px;  
+        width: 16px;  
         height: 16px; 
     }
 
