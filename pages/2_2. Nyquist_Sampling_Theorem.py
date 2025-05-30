@@ -293,7 +293,7 @@ if audio_data is not None:
     # Sampling parameters
     default_Fs_under = int(max_freq / 1.5)  # Undersampling (Aliasing)
     default_Fs_critical = int(max_freq)  # Critical sampling
-    default_Fs_over = int(2.5 * max_freq)  # Oversampling (No Aliasing)
+    default_Fs_over = int(2* max_freq)  # Oversampling (No Aliasing)
 
     Fs_under = st.number_input("Undersampling Frequency (Fs < 2Fm)", min_value=1, value=default_Fs_under)
     Fs_critical = st.number_input("Critical Sampling Frequency (Fs = 2Fm)", min_value=1, value=default_Fs_critical)
