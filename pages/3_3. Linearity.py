@@ -190,6 +190,7 @@ st.markdown("""
 ## Output
 """)
 
+st.write("a1 = 2 & a2 = 4")
 st.image(r"Media/Linearity_Eg_1_Op.png")
 
 st.header("", divider="blue")
