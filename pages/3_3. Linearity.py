@@ -181,7 +181,7 @@ A system is linear if it follows the principles of homogeneity (scaling) and sup
 ## **Condition for Linearity**
 If y1 (n) = y2 (n), then the system is linear. This means that the output produced when applying a weighted sum of inputs to the system is the same as the weighted sum of the individual outputs.
 
-## **Example no 01:- y (n) = n x(n)**
+## **Example no 01:- y (n) = n*x(n)**
 
 """)
 st.image(r"Media/Linearity_Eg_1.png", caption="Reference : Signals & Systems By A. Nagoor Kani")
@@ -191,7 +191,7 @@ st.markdown("""
 """)
 
 st.write("a1 = 2 & a2 = 4")
-st.image(r"Media/Linearity_Eg_1_Op.png")
+st.image(r"Media/Media/Media/Linearity_Eg_1_Op.png")
 
 st.header("", divider="blue")
 
@@ -206,4 +206,4 @@ st.markdown("""
 """)
 
 st.write("a1 = 2 & a2 = 4")
-st.image(r"Media/Linearity_Eg_2_Op.png")
+st.image(r"Media/Media/Media/Linearity_Eg_2_Op.jpg")
