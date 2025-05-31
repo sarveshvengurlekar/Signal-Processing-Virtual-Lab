@@ -199,11 +199,11 @@ st.markdown("""
 ## **Example no 02:- y (n) = x^2 (n)** 
 """)
 
-st.image(r"Media/Media/Media/Media/Media/Linearity_Eg_2_Op.png.jpg", caption="Reference : Signals & Systems By A. Nagoor Kani")
+st.image(r"Media/Linearity_Eg_2.png", caption="Reference : Signals & Systems By A. Nagoor Kani")
 
 st.markdown("""
 ## Output
 """)
 
 st.write("a1 = 2 & a2 = 4")
-st.image(r"Media/Media/Media/Linearity_Eg_2_Op.jpg")
+st.image(r"Media/Media/Media/Media/Media/Linearity_Eg_2_Op.png.jpg")
