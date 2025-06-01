@@ -228,7 +228,6 @@ A High-Pass Filter with a cutoff frequency of \( 50 \, Hz} \) would block any fr
 
 ---
 
-You can experiment with different filters and audio inputs to better understand the impact of LTI systems on audio signals.
 """)
 
 
