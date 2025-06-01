@@ -226,6 +226,19 @@ A Low-Pass Filter with a cutoff frequency of \( 500 \, Hz \) would attenuate fre
 
 A High-Pass Filter with a cutoff frequency of \( 50 \, Hz} \) would block any frequencies below \( 50 \, Hz \), making it ideal for removing low-frequency hums or rumble.
 
+local_file_path = "Media/LTI_Audio.wav"  # Update this with the correct path
+
+# Read the file in binary mode
+with open(local_file_path, "rb") as file:
+    wav_bytes = file.read()
+    # Streamlit download button
+
+st.download_button(
+    label="Download Audio File",
+    data=wav_bytes,
+    file_name="LTI_Audio.wav",
+    mime="audio/wav")
+
 ---
 
 """)
