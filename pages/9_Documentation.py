@@ -218,8 +218,8 @@ st.write("""
    - If you don’t have a **.wav** file, use the provided audio in the **Nyquist Sampling Theorem** section.
 
 5. After selecting the **Signal Source**, scroll down to enter the sampling frequency for:
-   - **Undersampling** (Fs < Fm)  
-   - **Critical Sampling** (Fs = Fm)  
+   - **Undersampling** (Fs < 2Fm)  
+   - **Critical Sampling** (Fs =2 Fm)  
    - **Oversampling** (Fs > 2Fm)  
 
 6. After entering the frequency values, **play the audio** and analyze the **Time Domain** and **Frequency Domain** plots of the signal.
@@ -271,3 +271,26 @@ st.write("""
    - **2nd waveform:** Noisy ECG cycle.
    - **3rd waveform:** Filtered ECG cycle.
 """)
+
+st.write("## - LTI System")
+st.write("""
+1. **Click on Signal Upload file** to Upload Audio File (.wav).
+2. Upload a **.wav** audio file from your desktop.  
+   - If you don’t have a **.wav** file, use the provided audio in the **LTI System** section.
+3. After selecting & uploading file choose the filter type from Low Pass & High Pass.
+4. Enter the Cutoff Frequency in **Hz**.
+5. After entering the frequency value & applying filter, **play the audio** and analyze the Frequency plots of the signal.
+""")
+
+
+
+
+
+
+
+
+
+
+
+
+
