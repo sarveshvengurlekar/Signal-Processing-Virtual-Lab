@@ -271,7 +271,7 @@ if uploaded_file is not None:
         st.error(f"Failed to load audio: {e}")
 
 # Filter selection
-filter_type = st.selectbox("Select Filter Type", ["Low-Pass", "High-Pass", "Band-Pass"])
+filter_type = st.selectbox("Select Filter Type", ["Low-Pass", "High-Pass"])
 
 # Cutoff frequency inputs
 nyquist = 0.5 * st.session_state.sample_rate if st.session_state.sample_rate else 22050  # Default Nyquist for error handling
