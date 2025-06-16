@@ -4,6 +4,6 @@ streamlit
 matplotlib
 numpy
 scipy
-
+soundfile
 
 
