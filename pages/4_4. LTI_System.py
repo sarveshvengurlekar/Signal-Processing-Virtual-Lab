@@ -2,8 +2,8 @@ import base64
 import streamlit as st
 import numpy as np
 import scipy.signal as signal
-import scipy.io.wavfile as wav
-import io
+#import scipy.io.wavfile as wav
+#import io
 import matplotlib.pyplot as plt
 
 
@@ -243,6 +243,9 @@ st.download_button(
     file_name="LTI_Audio.wav",
     mime="audio/wav")
 
+'''
+#only testing
+
 # Function to convert audio to base64 for browser playback
 def get_audio_base64(audio, sample_rate):
     buffer = io.BytesIO()
@@ -379,3 +382,4 @@ if st.button("Plot Response"):
 
         plt.tight_layout()
         st.pyplot(fig)
+    '''
