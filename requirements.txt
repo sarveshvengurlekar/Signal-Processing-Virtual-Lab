@@ -1,4 +1,5 @@
 
+base64
 streamlit
 matplotlib
 numpy
